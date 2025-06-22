@@ -5,19 +5,19 @@ const HomeHeader = () => {
     return (
         <div className='home-header'>
             <h1>
-                <span>
-                    DESIGN  <img src="./images/headerDot.svg" alt="" className="header-dot" />
+                <span className='header-dot'>
+                    DESIGN
                 </span>
                 <span>
                     <span>
 
                     </span>
-                    <span>
-                        DEVELOP  <img src="./images/headerDot.svg" alt="" className="header-dot" />
+                    <span className='header-dot'>
+                        DEVELOP
                     </span>
                 </span>
-                <span className='text-orange'>
-                    ADVERTISE  <img src="./images/headerDot.svg" alt="" className="header-dot" />
+                <span className='text-orange header-dot'>
+                    ADVERTISE
                 </span>
             </h1>
             <p className='text-gray-800 max-w-[660px] sm:mt-[40px] sm:mb-[50px] mt-[24px] mb-[32px]'>

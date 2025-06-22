@@ -1,7 +1,9 @@
 import React from 'react'
 import AboutUsCard from './AboutUsCard'
+import { useState } from 'react'
 
 const AboutUs = () => {
+
     const aboutUsData = [
         {
             title: "Professional Experts",
@@ -24,6 +26,7 @@ const AboutUs = () => {
             imgsrc: "./images/about-1.png"
         }
     ]
+
     return (
         <div className='about-us'>
             <div className="container">
@@ -40,17 +43,17 @@ const AboutUs = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 mt-[50px] gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 mt-8 gap-5">
                     {
                         aboutUsData?.map((data, index) => {
                             return (
-                                <AboutUsCard data={data} />
+                                <AboutUsCard key={index} data={data} />
                             )
                         })
                     }
                 </div>
 
-                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-5'>
                     <div className='abt-insights'>
                         <h4>500+</h4>
                         <span className="abt-happy">
@@ -70,6 +73,8 @@ const AboutUs = () => {
                         </span>
                     </div>
                 </div>
+
+
             </div>
         </div>
     )
