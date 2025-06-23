@@ -18,7 +18,7 @@ const NextArrow = ({ onClick }) => (
     </button>
 )
 
-const Projects = () => {
+const Projects = ({ className }) => {
     // Sample project data matching the screenshot
     const projectsData = [
         {
@@ -26,28 +26,28 @@ const Projects = () => {
             category: "Landing Page UI",
             title: "Model Agency",
             description: "Creating An Impactful Digital Gallery Of Passion And Expertise",
-            image: "./images/project-1.jpg" // Replace with actual image path
+            image: "/images/project-1.jpg" // Replace with actual image path
         },
         {
             id: 2,
             category: "Website",
             title: "Mindfulness",
             description: "Harmonising Mind, Body, And Design",
-            image: "./images/project-1.jpg" // Replace with actual image path
+            image: "/images/project-1.jpg" // Replace with actual image path
         },
         {
             id: 3,
             category: "Posts",
             title: "Mindfulness",
             description: "Harmonising Mind, Body, And Design",
-            image: "./images/project-1.jpg" // Replace with actual image path
+            image: "/images/project-1.jpg" // Replace with actual image path
         },
         {
             id: 4,
             category: "Brand Identity",
             title: "Mindfulness",
             description: "Harmonising Mind, Body, And Design",
-            image: "./images/project-1.jpg" // Replace with actual image path
+            image: "/images/project-1.jpg" // Replace with actual image path
         }
     ]
 
@@ -86,7 +86,7 @@ const Projects = () => {
                 <div className="projects-header">
                     <div>
                         <div className="projects-badge">
-                            <img src="./images/flower-orange.svg" alt="" className="flwr-orange" />
+                            <img src="/images/flower-orange.svg" alt="" className="flwr-orange" />
                             <span>OUR Portfolio</span>
                         </div>
                         <h2>WHAT WE DO BEST</h2>

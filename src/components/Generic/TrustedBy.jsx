@@ -4,27 +4,27 @@ import Marquee from 'react-fast-marquee'
 const TrustedBy = () => {
     const logos = [
         {
-            img: './images/feedly.png',
+            img: '/images/feedly.png',
             title: 'feedly',
         },
         {
-            img: './images/feedly.png',
+            img: '/images/feedly.png',
             title: 'feedly',
         },
         {
-            img: './images/feedly.png',
+            img: '/images/feedly.png',
             title: 'feedly',
         },
         {
-            img: './images/feedly.png',
+            img: '/images/feedly.png',
             title: 'feedly',
         },
         {
-            img: './images/feedly.png',
+            img: '/images/feedly.png',
             title: 'feedly',
         },
         {
-            img: './images/feedly.png',
+            img: '/images/feedly.png',
             title: 'feedly',
         },
     ]
@@ -33,7 +33,7 @@ const TrustedBy = () => {
             <div className="container">
                 <div className="head-cont">
                     <div className="head-pill">
-                        <img src="./images/flower-white.svg" alt="" className="flwr-white" />
+                        <img src="/images/flower-white.svg" alt="" className="flwr-white" />
                         See The WizSpeed Clients
                     </div>
                     <h2 className="head-h2">
@@ -44,7 +44,7 @@ const TrustedBy = () => {
                     </p>
                 </div>
             </div>
-            <div className="sm:my-[50px] my-[32px]">
+            <div className="sm:mt-[50px] mt-[32px] mb-7">
                 <Marquee speed={20} gradient={false} pauseOnHover={true} autoFill={true}>
                     {logos.map((src, index) => (
                         <div key={index} className='trust-img mx-[12px]'>
@@ -58,7 +58,7 @@ const TrustedBy = () => {
                 </Marquee>
             </div>
             <div className="">
-                <Marquee speed={20} gradient={false} pauseOnHover={true} autoFill={true}>
+                <Marquee speed={20} gradient={false} pauseOnHover={true} autoFill={true} direction='right'>
                     {logos.map((src, index) => (
                         <div key={index} className='trust-img mx-[12px]'>
                             <img

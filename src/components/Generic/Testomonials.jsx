@@ -1,8 +1,6 @@
 import React, { useRef, useState } from 'react'
 import Slider from 'react-slick'
 import { FaStar, FaPlay, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6'
 
 const Testomonials = () => {
@@ -117,7 +115,7 @@ const Testomonials = () => {
             <div className="container">
                 <div className="head-cont">
                     <div className="head-pill">
-                        <img src="./images/flower-white.svg" alt="" className="flwr-white" />
+                        <img src="/images/flower-white.svg" alt="" className="flwr-white" />
                         Testimonials
                     </div>
                     <h2 className="head-h2">
@@ -155,7 +153,7 @@ const Testomonials = () => {
                                             </div>
                                         </div>
 
-                                        <img src="./images/Quotes.svg" alt="" className="quote-svg" />
+                                        <img src="/images/Quotes.svg" alt="" className="quote-svg" />
 
                                         <p className="text-gray-700 text-lg leading-relaxed mt-2">
                                             {testimonial.text}

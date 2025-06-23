@@ -17,10 +17,10 @@ const WhatWeDo = () => {
                 { id: 'fullstack', name: 'Full Stack Solutions', icon: '🔧' }
             ],
             images: {
-                responsive: './images/whatwe.png',
-                frontend: './images/whatwe.png',
-                backend: './images/whatwe.png',
-                fullstack: './images/whatwe.png'
+                responsive: '/images/whatwe.png',
+                frontend: '/images/whatwe.png',
+                backend: '/images/whatwe.png',
+                fullstack: '/images/whatwe.png'
             }
         },
         'digital-marketing': {
@@ -33,10 +33,10 @@ const WhatWeDo = () => {
                 { id: 'content', name: 'Content Marketing', icon: '📝' }
             ],
             images: {
-                seo: './images/whatwe.png',
-                social: './images/whatwe.png',
-                ppc: './images/whatwe.png',
-                content: './images/whatwe.png'
+                seo: '/images/whatwe.png',
+                social: '/images/whatwe.png',
+                ppc: '/images/whatwe.png',
+                content: '/images/whatwe.png'
             }
         },
         'software-development': {
@@ -49,10 +49,10 @@ const WhatWeDo = () => {
                 { id: 'integration', name: 'System Integration', icon: '🔄' }
             ],
             images: {
-                custom: './images/whatwe.png',
-                saas: './images/whatwe.png',
-                api: './images/whatwe.png',
-                integration: './images/whatwe.png'
+                custom: '/images/whatwe.png',
+                saas: '/images/whatwe.png',
+                api: '/images/whatwe.png',
+                integration: '/images/whatwe.png'
             }
         },
         'app-development': {
@@ -65,10 +65,10 @@ const WhatWeDo = () => {
                 { id: 'dynamic', name: 'Dynamic Development', icon: '⚡' }
             ],
             images: {
-                ios: './images/whatwe.png',
-                android: './images/whatwe.png',
-                static: './images/whatwe.png',
-                dynamic: './images/whatwe.png'
+                ios: '/images/whatwe.png',
+                android: '/images/whatwe.png',
+                static: '/images/whatwe.png',
+                dynamic: '/images/whatwe.png'
             }
         }
     }
@@ -81,14 +81,14 @@ const WhatWeDo = () => {
             <div className="container">
                 <div className="head-cont">
                     <div className="head-pill">
-                        <img src="./images/flower-white.svg" alt="" className="flwr-white" />
+                        <img src="/images/flower-white.svg" alt="" className="flwr-white" />
                         See How Our Services Make Us Tick Us
                     </div>
                     <h2 className="head-h2">
                         WHAT WE <span className="text-orange">DO BEST</span>
                     </h2>
                     <p className="text-gray-900 text-center">
-                        We don’t sell our digital marketing and web design services in a hit-or-miss manner. Instead, we cater to your problems through our targeted services, including:
+                        We don't sell our digital marketing and web design services in a hit-or-miss manner. Instead, we cater to your problems through our targeted services, including:
                     </p>
                 </div>
 

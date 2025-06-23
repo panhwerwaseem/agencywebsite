@@ -18,9 +18,9 @@ const Home = () => {
                 <div className="container lg:mt-16 md:mt-12 mt-8">
                     <HomeHeader />
                 </div>
-                <img src="./images/headerShadow.svg" alt="" className="" />
-                <img src="./images/headerRectangleMd.svg" alt="" className="" />
-                <img src="./images/headerRectangleSm.svg" alt="" className="" />
+                <img src="/images/headerShadow.svg" alt="" className="" />
+                <img src="/images/headerRectangleMd.svg" alt="" className="" />
+                <img src="/images/headerRectangleSm.svg" alt="" className="" />
             </div>
             <TrustedBy />
             <AboutUs />

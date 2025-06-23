@@ -17,8 +17,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Logo and Description */}
                     <div className="space-y-4">
-                        <img src="./images/logo.png" alt="" className="footer-logo h-10 w-32" />
-                        <p className="text-sm leading-relaxed">
+                        <img src="/images/logo.png" alt="" className="footer-logo h-10 w-32" />
+                        <p className="">
                             We do it fast, we do it right, and we do it for people who are ready to grow.
                         </p>
                     </div>
@@ -81,7 +81,7 @@ const Footer = () => {
                         <a href="#" className="footer-link">Terms & Conditions</a>
                     </div>
                 </div>
-                <img src="./images/WIZSPEED.svg" alt="" className="footer-bg w-full mt-8" />
+                <img src="/images/WIZSPEED.svg" alt="" className="footer-bg w-full mt-8" />
             </div>
         </footer>
     )

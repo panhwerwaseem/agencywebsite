@@ -49,7 +49,7 @@ const FAQs = () => {
                     <div className="lg:col-span-1">
                         <div className="head-cont justify-start items-start text-left">
                             <div className="head-pill">
-                                <img src="./images/flower-white.svg" alt="" className="flwr-white" />
+                                <img src="/images/flower-white.svg" alt="" className="flwr-white" />
                                 Faqs
                             </div>
                             <h2 className="head-h2">
@@ -65,7 +65,7 @@ const FAQs = () => {
 
                         <div className="mt-8">
                             <img
-                                src="./images/faqs.jpg"
+                                src="/images/faqs.jpg"
                                 alt="Team collaboration"
                                 className="rounded-xl aspect-video"
                             />

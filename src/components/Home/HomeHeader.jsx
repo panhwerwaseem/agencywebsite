@@ -36,7 +36,7 @@ const HomeHeader = () => {
                     </a>
                 </div>
                 <div className="right-hdr">
-                    <img src="./images/flower-orange.svg" alt="" className="flwr-orange" />
+                    <img src="/images/flower-orange.svg" alt="" className="flwr-orange" />
                     <div className="h-px w-[60px] bg-gray-900 my-[3px]"></div>
                     <p className='text-gray-900'>Transform Your Digital <br /> Impact with Wizspeed</p>
                 </div>

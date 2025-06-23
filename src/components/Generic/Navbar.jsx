@@ -66,7 +66,7 @@ const Navbar = () => {
             <div className="navbar-container">
                 <div className="navbar-logo">
                     <a href="/" className="logo-link">
-                        <img src="./images/logo.png" alt="Logo" className="logo-image" />
+                        <img src="/images/logo.png" alt="Logo" className="logo-image" />
                     </a>
                 </div>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
                                             onClick={() => handleCategoryClick('web-development')}
                                         >
                                             <div className="category-icon">
-                                                <img src="./images/service1.svg" alt="" />
+                                                <img src="/images/service1.svg" alt="" />
                                             </div>
                                             <span>Web Development</span>
                                         </div>
@@ -97,7 +97,7 @@ const Navbar = () => {
                                             onClick={() => handleCategoryClick('digital-marketing')}
                                         >
                                             <div className="category-icon">
-                                                <img src="./images/service2.svg" alt="" />
+                                                <img src="/images/service2.svg" alt="" />
                                             </div>
                                             <span>Digital Marketing</span>
                                         </div>
@@ -106,7 +106,7 @@ const Navbar = () => {
                                             onClick={() => handleCategoryClick('app-development')}
                                         >
                                             <div className="category-icon">
-                                                <img src="./images/service3.svg" alt="" />
+                                                <img src="/images/service3.svg" alt="" />
                                             </div>
                                             <span>App Development</span>
                                         </div>
@@ -115,7 +115,7 @@ const Navbar = () => {
                                             onClick={() => handleCategoryClick('software-development')}
                                         >
                                             <div className="category-icon">
-                                                <img src="./images/service4.svg" alt="" />
+                                                <img src="/images/service4.svg" alt="" />
                                             </div>
                                             <span>Software Development</span>
                                         </div>

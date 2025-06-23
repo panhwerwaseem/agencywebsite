@@ -32,7 +32,7 @@ const AboutUs = () => {
             <div className="container">
                 <div className="head-cont">
                     <div className="head-pill">
-                        <img src="./images/flower-white.svg" alt="" className="flwr-white" />
+                        <img src="/images/flower-white.svg" alt="" className="flwr-white" />
                         About Us
                     </div>
                     <h2 className="head-h2">
