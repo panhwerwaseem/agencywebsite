@@ -12,6 +12,7 @@ import MobArchieves from './pages/MobileArchieves/MobArchieves'
 import SoftwareDevelopmentPage from './pages/SoftwareDevelopment/SoftwareDevelopmentPage'
 import DigitalMarketing from './pages/DigitalMarketing/DigitalMarketing'
 import Travelica from './pages/MobileArchieves/Travelica'
+import AboutUs from './pages/AboutUs/AboutUs'
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
         <Route path="/mob-archieves/travelica" element={<Travelica />} />
         <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
         <Route path="/digital-marketing" element={<DigitalMarketing />} />
-        {/* <Route path="/aboutus" element={<AboutUs />} /> */}
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   )

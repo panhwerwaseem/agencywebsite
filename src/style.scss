@@ -41,6 +41,10 @@ img {
     color: #8C8C8C;
 }
 
+p {
+    font-size: 18px;
+}
+
 .home-page {
     background-color: #121212;
     padding: 30px 0 120px;
@@ -650,9 +654,13 @@ img {
     background-color: #121212;
     padding: 120px 0;
 
+    .container {
+        max-width: 1130px !important;
+    }
+
     .testimonial-text {
         background-color: #1B1B1B;
-        padding: 28px 28px 0;
+        padding: 28px 28px;
         border-radius: 12px;
         border: 1px solid #FFFFFF14;
         color: #fff;
@@ -671,6 +679,7 @@ img {
         cursor: pointer;
         transition: .3s all ease;
         border: 1px solid #FFFFFF14;
+        top: calc(50% - 65px);
 
         &:hover {
             background-color: #FC5E14;
@@ -863,7 +872,7 @@ img {
         visibility: hidden;
         transition: all 0.3s ease;
         z-index: 1000;
-        width: 800px;
+        width: 620px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 1;
 
@@ -896,10 +905,11 @@ img {
                     align-items: center;
                     gap: 12px;
                     padding: 12px 20px;
-                    color: #ccc;
+                    color: #AFAFAF;
                     cursor: pointer;
                     transition: all 0.3s ease;
                     border-radius: 12px;
+                    font-family: 'Space Grotesk', sans-serif;
 
                     &:hover,
                     &.active {
@@ -917,7 +927,7 @@ img {
                     }
 
                     span {
-                        font-weight: 500;
+                        font-weight: 700;
                     }
                 }
             }
@@ -934,10 +944,11 @@ img {
                     gap: 8px;
 
                     .service-link {
-                        color: #ccc;
+                        color: #fff;
                         text-decoration: none;
                         padding: 8px 12px;
-                        font-weight: 400;
+                        font-weight: 500;
+                        font-family: 'Space Grotesk', sans-serif;
                         transition: all 0.3s ease;
                         border-bottom: 1px solid #FFFFFF1A;
 
@@ -1250,6 +1261,16 @@ nav input {
     padding: 120px 0;
 }
 
+.what-we-services-tab {
+    border-top: 1px solid rgba(108, 108, 108, 0.3);
+
+    > {
+        div {
+            border-bottom: 1px solid rgba(108, 108, 108, 0.3);
+        }
+    }
+}
+
 .results-tab {
     background-color: #1B1B1B;
     padding: 28px 28px 0;
@@ -1540,5 +1561,53 @@ nav input {
         border-radius: 32px;
         object-fit: cover;
         aspect-ratio: 16/9;
+    }
+}
+
+.about-us-main {
+    background-color: #121212;
+    padding: 120px 0;
+}
+
+.right-way {
+    background-color: #121212;
+    padding: 0 0 120px;
+}
+
+.rotating-circle-btn {
+    background-color: #FC5E14;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    >svg {
+        animation: rotateCircle 12s linear infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 120px;
+        z-index: 0;
+    }
+
+    >div {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: transparent;
+    }
+}
+
+@keyframes rotateCircle {
+    100% {
+        transform: rotate(360deg);
     }
 }

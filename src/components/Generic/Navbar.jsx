@@ -20,44 +20,140 @@ const Navbar = () => {
 
     const serviceData = {
         'web-development': [
-            'Custom Web Design',
-            'Web Flow',
-            'Wix',
-            'WordPress',
-            'Shopify',
-            'E-Commerce',
-            'Square Space',
-            'Responsive Design'
+            {
+                name: "Custom Web Design",
+                route: "/service/web-development"
+            },
+            {
+                name: "Webflow",
+                route: ""
+            },
+            {
+                name: "Wix",
+                route: ""
+            },
+            {
+                name: "WordPress",
+                route: ""
+            },
+            {
+                name: "Shopify",
+                route: ""
+            },
+            {
+                name: "E-Commerce",
+                route: ""
+            },
+            {
+                name: "Square Space",
+                route: ""
+            },
+            {
+                name: "Responsive Design",
+                route: ""
+            }
         ],
         'digital-marketing': [
-            'SEO Optimization',
-            'Google Ads',
-            'Social Media Marketing',
-            'Content Marketing',
-            'Email Marketing',
-            'Analytics & Reporting',
-            'Brand Strategy',
-            'PPC Campaigns'
+            {
+                name: "SEO Optimization",
+                route: "/digital-marketing"
+            },
+            {
+                name: "Google Ads",
+                route: ""
+            },
+            {
+                name: "Social Media Marketing",
+                route: ""
+            },
+            {
+                name: "Content Marketing",
+                route: ""
+            },
+            {
+                name: "Email Marketing",
+                route: ""
+            },
+            {
+                name: "Analytics & Reporting",
+                route: ""
+            },
+            {
+                name: "Brand Strategy",
+                route: ""
+            },
+            {
+                name: "PPC Campaigns",
+                route: ""
+            }
         ],
         'app-development': [
-            'iOS Apps',
-            'Android Apps',
-            'React Native',
-            'Flutter',
-            'Progressive Web Apps',
-            'Mobile UI/UX',
-            'App Store Optimization',
-            'Cross-Platform'
+            {
+                name: "iOS Apps",
+                route: "/mob-archieves"
+            },
+            {
+                name: "Android Apps",
+                route: "/mob-archieves/travelica"
+            },
+            {
+                name: "React Native",
+                route: ""
+            },
+            {
+                name: "Flutter",
+                route: ""
+            },
+            {
+                name: "Progressive Web Apps",
+                route: ""
+            },
+            {
+                name: "Mobile UI/UX",
+                route: ""
+            },
+            {
+                name: "App Store Optimization",
+                route: ""
+            },
+            {
+                name: "Cross-Platform",
+                route: ""
+            }
         ],
         'software-development': [
-            'Custom Software',
-            'API Development',
-            'Database Design',
-            'Cloud Solutions',
-            'Enterprise Systems',
-            'Integration Services',
-            'Maintenance & Support',
-            'Quality Assurance'
+            {
+                name: "Custom Software",
+                route: "/software-development"
+            },
+            {
+                name: "API Development",
+                route: ""
+            },
+            {
+                name: "Database Design",
+                route: ""
+            },
+            {
+                name: "Cloud Solutions",
+                route: ""
+            },
+            {
+                name: "Enterprise Systems",
+                route: ""
+            },
+            {
+                name: "Integration Services",
+                route: ""
+            },
+            {
+                name: "Maintenance & Support",
+                route: ""
+            },
+            {
+                name: "Quality Assurance",
+                route: ""
+            }
         ]
     };
 
@@ -123,7 +219,7 @@ const Navbar = () => {
                                     <div className="dropdown-right">
                                         <div className="service-grid">
                                             {serviceData[activeServiceCategory].map((service, index) => (
-                                                <a href="#" key={index} className="service-link">{service}</a>
+                                                <a href={service?.route} key={index} className="service-link">{service.name}</a>
                                             ))}
                                         </div>
                                     </div>
@@ -132,10 +228,10 @@ const Navbar = () => {
                             </div>
                         </li>
                         <li className="nav-item">
-                            <a href="/work" className="nav-link">Work</a>
+                            <a href="/portfolio" className="nav-link">Work</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/about" className="nav-link">About Us</a>
+                            <a href="/about-us" className="nav-link">About Us</a>
                         </li>
                         <li className="nav-item">
                             <a href="/contact" className="nav-link">Contact Us</a>

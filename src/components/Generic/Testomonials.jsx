@@ -126,14 +126,14 @@ const Testomonials = () => {
                     {/* Navigation Arrows */}
                     <button
                         onClick={prevSlide}
-                        className="absolute -left-10 top-1/2 -translate-y-1/2 z-10 testimonial-arrow"
+                        className="absolute -left-10  -translate-y-1/2 z-10 testimonial-arrow"
                     >
                         <FaArrowLeftLong />
                     </button>
 
                     <button
                         onClick={nextSlide}
-                        className="absolute -right-10 top-1/2 -translate-y-1/2 z-10 testimonial-arrow"
+                        className="absolute -right-10 -translate-y-1/2 z-10 testimonial-arrow"
                     >
                         <FaArrowRightLong />
                     </button>
@@ -162,7 +162,7 @@ const Testomonials = () => {
 
                                     {/* Video Testimonial */}
                                     <div className="relative">
-                                        <div className="relative rounded-2xl overflow-hidden aspect-video bg-gradient-to-br from-orange-500 to-orange-600">
+                                        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-orange-500 to-orange-600">
                                             <img
                                                 src={testimonial.videoThumbnail}
                                                 alt={`${testimonial.name} video testimonial`}

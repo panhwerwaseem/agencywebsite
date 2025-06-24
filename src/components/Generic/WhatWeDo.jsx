@@ -113,12 +113,12 @@ const WhatWeDo = () => {
                 </div>
 
                 <div className="relative">
-                    <div className="border-t border-gray-900">
+                    <div className="what-we-services-tab">
                         {currentTab.services.map((service, index) => (
                             <div
                                 key={service.id}
                                 onClick={() => setActiveService(service.id)}
-                                className={`flex items-center lg:gap-10 md:gap-8 gap-6 py-9 cursor-pointer transition-all duration-300 border-b border-gray-900`}
+                                className={`flex items-center lg:gap-10 md:gap-8 gap-6 py-9 cursor-pointer transition-all duration-300`}
                             >
                                 <div className={`md:text-4xl text-2xl font-bold ${activeService === service.id ? 'text-white' : 'text-gray-900'}`}>
                                     {String(index + 1).padStart(2, '0')}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const AboutUsCard = ({ data }) => {
-    console.log(data)
+
     return (
         <div className='abt-card'>
             <h3>

@@ -1,0 +1,55 @@
+import React from 'react'
+
+const RightWay = () => {
+    return (
+        <div className='right-way'>
+            <div className="container">
+                <div className="head-cont">
+                    <div className="head-pill w-fit">
+                        <img src="/images/flower-white.svg" alt="" className="flwr-white" />
+                        HOW IT WORKS
+                    </div>
+                    <h2 className='head-h2'>
+                        PAY AND GET STARTED <span className="text-orange">
+                            RIGHT AWAY
+                        </span>
+                    </h2>
+                    <p className="text-gray-800">
+                        Our philosophy is simple — hire a team of diverse, passionate people and foster a culture that empowers you to do you best work.
+                    </p>
+                </div>
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 lg:mt-12 mt-10">
+                    <div className="abt-card pb-6">
+                        <h4 className='text-white font-space-grotesk text-2xl font-semibold mb-4'>
+                            Subscribe to a plan
+                        </h4>
+                        <p className='text-gray-700'>
+                            Subscribe to a plan & request as many designs as you’d like.
+                        </p>
+                        <img src="/images/abt-2.png" alt="" className='!mt-10' />
+                    </div>
+                    <div className="abt-card pb-6">
+                        <h4 className='text-white font-space-grotesk text-2xl font-semibold mb-4'>
+                            Subscribe to a plan
+                        </h4>
+                        <p className='text-gray-700'>
+                            Subscribe to a plan & request as many designs as you’d like.
+                        </p>
+                        <img src="/images/abt-3.png" alt="" className='!mt-10' />
+                    </div>
+                    <div className="abt-card pb-6">
+                        <h4 className='text-white font-space-grotesk text-2xl font-semibold mb-4'>
+                            Subscribe to a plan
+                        </h4>
+                        <p className='text-gray-700'>
+                            Subscribe to a plan & request as many designs as you’d like.
+                        </p>
+                        <img src="/images/abt-4.png" alt="" className='!mt-10' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default RightWay
