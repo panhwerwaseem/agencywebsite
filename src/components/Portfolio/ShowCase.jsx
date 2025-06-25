@@ -13,12 +13,12 @@ const ShowCase = () => {
                     <h2 className="head-h2">
                         Website <span className="text-orange">ShowCase</span>
                     </h2>
-                    <p className="text-gray-900 text-center">
+                    <p className="text-gray-900 text-center max-w-[560px]">
                         From bold website redesigns to high-converting ad campaigns, discover how we turn ideas into measurable outcomes.
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 lg:mt-16 mt-10 mb-10 min-h-[600px]">
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 lg:my-16 my-10 min-h-[600px]">
                     <div className='grid grid-flow-col grid-rows-2 gap-5'>
                         <img src="/images/showcase-1.jpg" alt="" className='w-full h-full object-cover rounded-xl' />
                         <img src="/images/showcase-2.jpg" alt="" className='w-full h-full object-cover rounded-xl' />

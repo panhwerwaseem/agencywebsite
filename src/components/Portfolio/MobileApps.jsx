@@ -5,12 +5,14 @@ const MobileApps = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1200,
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
         arrows: false,
         dots: false,
+        autoplay: true,
+        autoplaySpeed: 4000
     }
 
     const data = [
@@ -67,7 +69,7 @@ const MobileApps = () => {
                         Our mobile app process turns ideas into elegant, high-performing digital products. We focus on clean design, smooth interactions, and measurable results.
                     </p>
                 </div>
-                <div className="mobile-apps-slider my-12 w-[2490px]">
+                <div className="mobile-apps-slider lg:my-16 my-10 w-[2490px]">
                     <Slider {...settings}>
                         {data.map((item, index) => (
                             <div key={index} className='px-5'>

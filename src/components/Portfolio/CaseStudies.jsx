@@ -6,12 +6,14 @@ const CaseStudies = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1200,
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
         arrows: false,
         dots: false,
+        autoplay: true,
+        autoplaySpeed: 4000
     }
 
     const data = [
@@ -69,7 +71,7 @@ const CaseStudies = () => {
                     </p>
                 </div>
 
-                <div className="case-slider my-12 w-[2490px]">
+                <div className="case-slider lg:my-16 my-10 w-[2490px]">
                     <Slider {...settings}>
                         {data.map((item, index) => (
                             <div key={index} className='px-5'>

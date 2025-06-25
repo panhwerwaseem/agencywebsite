@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ServiceHeader = ({ data }) => {
+const ServiceHeader = ({ data, isSpanBlock = true }) => {
     return (
         <div className='service-header'>
             <div className="head-pill">
@@ -8,7 +8,7 @@ const ServiceHeader = ({ data }) => {
                 {data?.pill}
             </div>
             <h1>
-                <span className='text-orange'>
+                <span className={`text-orange ${isSpanBlock ? '!block' : '!inline'}`}>
                     {data?.titleOrange}
                 </span>
                 {
