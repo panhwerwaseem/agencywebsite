@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../components/Generic/Navbar'
 import ServiceHeader from '../../components/Services/ServiceHeader'
 import TrustedBy from '../../components/Generic/TrustedBy'
@@ -99,38 +99,75 @@ const WebDevelopment = () => {
         description: "We build fast, responsive, and scalable websites tailored to your business goals. Our solutions combine modern design with powerful functionality to help you grow online."
     }
 
-    const stepsData = [
-        {
-            number: "01",
-            title: "Discovery & Strategy",
-            description: "We start by understanding your business goals, target audience, and unique challenges to create a tailored strategy.",
-            image: "/images/steps.jpg"
-        },
-        {
-            number: "02",
-            title: "Design & Planning",
-            description: "Our creative team develops wireframes, mockups, and detailed project plans to bring your vision to life.",
-            image: "/images/steps.jpg"
-        },
-        {
-            number: "03",
-            title: "Development & Build",
-            description: "We code and build your solution using the latest technologies and best practices for optimal performance.",
-            image: "/images/steps.jpg"
-        },
-        {
-            number: "04",
-            title: "Testing & Quality Assurance",
-            description: "Rigorous testing across devices and browsers ensures your project works flawlessly before launch.",
-            image: "/images/steps.jpg"
-        },
-        {
-            number: "05",
-            title: "Launch & Support",
-            description: "We handle the launch process and provide ongoing support to ensure your continued success.",
-            image: "/images/steps.jpg"
-        }
-    ]
+    const stepsData = {
+        'custom-web-design': [
+            {
+                number: "01",
+                title: "Discovery & Strategy",
+                description: "We start by understanding your business goals, target audience, and unique challenges to create a tailored strategy.",
+                image: "/images/steps.jpg"
+            },
+            {
+                number: "02",
+                title: "Design & Planning",
+                description: "Our creative team develops wireframes, mockups, and detailed project plans to bring your vision to life.",
+                image: "/images/steps.jpg"
+            },
+            {
+                number: "03",
+                title: "Development & Build",
+                description: "We code and build your solution using the latest technologies and best practices for optimal performance.",
+                image: "/images/steps.jpg"
+            },
+            {
+                number: "04",
+                title: "Testing & Quality Assurance",
+                description: "Rigorous testing across devices and browsers ensures your project works flawlessly before launch.",
+                image: "/images/steps.jpg"
+            },
+            {
+                number: "05",
+                title: "Launch & Support",
+                description: "We handle the launch process and provide ongoing support to ensure your continued success.",
+                image: "/images/steps.jpg"
+            }
+        ],
+        '3d-animated': [
+            {
+                number: "01",
+                title: "Discovery & Strategy",
+                description: "We start by understanding your business goals, target audience, and unique challenges to create a tailored strategy.",
+                image: "/images/steps.jpg"
+            },
+            {
+                number: "02",
+                title: "Design & Planning",
+                description: "Our creative team develops wireframes, mockups, and detailed project plans to bring your vision to life.",
+                image: "/images/steps.jpg"
+            },
+            {
+                number: "03",
+                title: "Development & Build",
+                description: "We code and build your solution using the latest technologies and best practices for optimal performance.",
+                image: "/images/steps.jpg"
+            },
+            {
+                number: "04",
+                title: "Testing & Quality Assurance",
+                description: "Rigorous testing across devices and browsers ensures your project works flawlessly before launch.",
+                image: "/images/steps.jpg"
+            },
+            {
+                number: "05",
+                title: "Launch & Support",
+                description: "We handle the launch process and provide ongoing support to ensure your continued success.",
+                image: "/images/steps.jpg"
+            }
+
+        ]
+    }
+
+    const [activeTab, setActiveTab] = useState(Object.keys(tabsData)[0] || '')
 
     return (
         <>
@@ -144,8 +181,8 @@ const WebDevelopment = () => {
                 <img src="/images/headerRectangleSm.svg" alt="" className="" />
             </div>
             <TrustedBy />
-            <ServiceTabs headData={headData} tabsData={tabsData} />
-            <ServiceSteps stepsData={stepsData} />
+            <ServiceTabs headData={headData} tabsData={tabsData} activeTab={activeTab} setActiveTab={setActiveTab} />
+            <ServiceSteps stepsData={stepsData[activeTab]} />
             <Projects />
             <div className='pt-[120px] bg-brand-dark'>
                 <FAQs />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FaGlobe } from 'react-icons/fa6'
 
 const ServiceTabs = ({
@@ -9,9 +9,10 @@ const ServiceTabs = ({
         description: "We don't sell our digital marketing and web design services in a hit-or-miss manner. Instead, we cater to your problems through our targeted services, including:"
     },
     tabsData = {},
+    activeTab,
+    setActiveTab,
     className = ""
 }) => {
-    const [activeTab, setActiveTab] = useState(Object.keys(tabsData)[0] || '')
 
     const currentTab = tabsData[activeTab]
 
@@ -77,7 +78,7 @@ const ServiceTabs = ({
                     <img
                         src={currentTab.image}
                         alt={currentTab.title}
-                        className="rounded-lg shadow-2xl w-full h-auto lg:col-span-3 aspect-video"
+                        className="rounded-lg shadow-2xl w-full h-100 lg:col-span-3 aspect-video"
                     />
 
 

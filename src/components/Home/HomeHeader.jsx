@@ -24,8 +24,8 @@ const HomeHeader = () => {
                                     </textPath>
                                 </text>
                             </svg>
-                            <div className="flex items-center justify-center" style={{ width: 60, height: 60, borderRadius: '50%', background: 'transparent', zIndex: 1 }}>
-                                <FaArrowRight size={18} />
+                            <div className="flex items-center justify-center -rotate-45" style={{ width: 60, height: 60, borderRadius: '50%', background: 'transparent', zIndex: 1 }}>
+                                <FaArrowRight size={30} />
                             </div>
                         </div>
                         {/* Video */}

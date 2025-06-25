@@ -1251,7 +1251,7 @@ nav input {
 
     p {
         @apply text-gray-800;
-        max-width: 620px;
+        max-width: 673px;
         margin: auto;
     }
 }
@@ -1273,7 +1273,7 @@ nav input {
 
 .results-tab {
     background-color: #1B1B1B;
-    padding: 28px 28px 0;
+    padding: 28px 28px;
     border-radius: 12px;
     border: 1px solid #FFFFFF14;
     color: #fff;
@@ -1609,5 +1609,39 @@ nav input {
 @keyframes rotateCircle {
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.service-essentianls {
+    background-color: #121212;
+}
+
+.ess-card {
+    background-color: #1B1B1B;
+    padding: 28px 28px;
+    border-radius: 12px;
+    border: 1px solid #FFFFFF14;
+    color: #fff;
+
+    h3 {
+        @apply font-medium font-space-grotesk text-xl text-white mt-[30px] mb-5;
+        letter-spacing: 0;
+        line-height: 24px;
+    }
+
+    p {
+        @apply text-gray-700 font-medium;
+    }
+
+    .ess-icon {
+        width: 70px;
+        height: 70px;
+        background-color: #000000;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {}
     }
 }
