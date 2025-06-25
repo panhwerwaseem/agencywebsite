@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { FaChevronDown } from 'react-icons/fa6';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
     const [activeServiceCategory, setActiveServiceCategory] = useState('web-development');
+    const location = useLocation();
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -16,6 +18,14 @@ const Navbar = () => {
 
     const handleCategoryClick = (category) => {
         setActiveServiceCategory(category);
+    };
+
+    // Function to check if a nav item is active
+    const isActive = (path) => {
+        if (path === '/') {
+            return location.pathname === '/';
+        }
+        return location.pathname.startsWith(path);
     };
 
     const serviceData = {
@@ -169,10 +179,10 @@ const Navbar = () => {
                 <div className="navbar-menu">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a href="/" className="nav-link">Home</a>
+                            <a href="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>Home</a>
                         </li>
                         <li className="nav-item dropdown">
-                            <a href="#" className="nav-link dropdown-toggle">
+                            <a href="#" className={`nav-link dropdown-toggle ${isActive('/service') || isActive('/digital-marketing') || isActive('/mob-archieves') || isActive('/software-development') ? 'active' : ''}`}>
                                 Services
                                 <FaChevronDown />
                             </a>
@@ -228,13 +238,13 @@ const Navbar = () => {
                             </div>
                         </li>
                         <li className="nav-item">
-                            <a href="/portfolio" className="nav-link">Work</a>
+                            <a href="/portfolio" className={`nav-link ${isActive('/portfolio') ? 'active' : ''}`}>Work</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/about-us" className="nav-link">About Us</a>
+                            <a href="/about-us" className={`nav-link ${isActive('/about-us') ? 'active' : ''}`}>About Us</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/contact" className="nav-link">Contact Us</a>
+                            <a href="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -257,9 +267,9 @@ const Navbar = () => {
             {/* Mobile menu */}
             <div className={`mobile-menu ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
                 <ul className="mobile-nav">
-                    <li><a href="/" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
+                    <li><a href="/" className={`mobile-nav-link ${isActive('/') ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
                     <li className="mobile-dropdown">
-                        <button className="mobile-nav-link" onClick={toggleMobileServices}>
+                        <button className={`mobile-nav-link ${isActive('/service') || isActive('/digital-marketing') || isActive('/mob-archieves') || isActive('/software-development') ? 'active' : ''}`} onClick={toggleMobileServices}>
                             Services <i className={`fas fa-chevron-down ${isMobileServicesOpen ? 'rotate' : ''}`}></i>
                         </button>
                         <div className={`mobile-dropdown-content ${isMobileServicesOpen ? 'mobile-dropdown-open' : ''}`}>
@@ -269,9 +279,9 @@ const Navbar = () => {
                             <a href="#" className="mobile-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Software Development</a>
                         </div>
                     </li>
-                    <li><a href="/work" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Work</a></li>
-                    <li><a href="/about" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>About Us</a></li>
-                    <li><a href="/contact" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</a></li>
+                    <li><a href="/work" className={`mobile-nav-link ${isActive('/portfolio') ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Work</a></li>
+                    <li><a href="/about" className={`mobile-nav-link ${isActive('/about-us') ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>About Us</a></li>
+                    <li><a href="/contact" className={`mobile-nav-link ${isActive('/contact') ? 'active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Contact Us</a></li>
                     <li className="mobile-auth">
                         <a href="/login" className="btn btn-login" onClick={() => setIsMobileMenuOpen(false)}>Login</a>
                         <a href="/register" className="btn btn-register" onClick={() => setIsMobileMenuOpen(false)}>Register</a>

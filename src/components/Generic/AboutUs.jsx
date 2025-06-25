@@ -23,7 +23,7 @@ const AboutUs = () => {
         {
             title: "Customer Support",
             description: "Our support team is ready to assist you 24/7. You can resolve your queries and get updated on your projects anytime.",
-            imgsrc: "./images/about-1.png"
+            imgsrc: "./images/about-4.png"
         }
     ]
 

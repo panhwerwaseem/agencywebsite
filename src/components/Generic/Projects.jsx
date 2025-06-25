@@ -33,21 +33,21 @@ const Projects = ({ className }) => {
             category: "Website",
             title: "Mindfulness",
             description: "Harmonising Mind, Body, And Design",
-            image: "/images/project-1.jpg" // Replace with actual image path
+            image: "/images/project-2.jpg" // Replace with actual image path
         },
         {
             id: 3,
             category: "Posts",
             title: "Mindfulness",
             description: "Harmonising Mind, Body, And Design",
-            image: "/images/project-1.jpg" // Replace with actual image path
+            image: "/images/project-3.jpg" // Replace with actual image path
         },
         {
             id: 4,
             category: "Brand Identity",
             title: "Mindfulness",
             description: "Harmonising Mind, Body, And Design",
-            image: "/images/project-1.jpg" // Replace with actual image path
+            image: "/images/project-4.png" // Replace with actual image path
         }
     ]
 
@@ -82,27 +82,29 @@ const Projects = ({ className }) => {
 
     return (
         <section className="projects-section">
-            <div className="container">
-                <div className="projects-header">
-                    <div>
-                        <div className="projects-badge">
-                            <img src="/images/flower-orange.svg" alt="" className="flwr-orange" />
-                            <span>OUR Portfolio</span>
-                        </div>
-                        <h2>WHAT WE DO BEST</h2>
-                        <p className='max-w-[640px]'>We don't sell our digital marketing and web design services in a hit-or-miss manner. Instead, we cater to your problems through our targeted services, including:</p>
-                    </div>
-                    <button className="view-all-btn">View All Projects</button>
-                </div>
-
-                <div className="projects-slider">
-                    <Slider {...sliderSettings}>
-                        {projectsData.map((project) => (
-                            <div key={project.id} className="project-slide">
-                                <ProjectCard project={project} />
+            <div className="project-inner">
+                <div className="container">
+                    <div className="projects-header">
+                        <div>
+                            <div className="projects-badge">
+                                <img src="/images/flower-orange.svg" alt="" className="flwr-orange" />
+                                <span>OUR Portfolio</span>
                             </div>
-                        ))}
-                    </Slider>
+                            <h2>WHAT WE DO BEST</h2>
+                            <p className='max-w-[640px]'>We don't sell our digital marketing and web design services in a hit-or-miss manner. Instead, we cater to your problems through our targeted services, including:</p>
+                        </div>
+                        <button className="view-all-btn">View All Projects</button>
+                    </div>
+
+                    <div className="projects-slider">
+                        <Slider {...sliderSettings}>
+                            {projectsData.map((project) => (
+                                <div key={project.id} className="project-slide">
+                                    <ProjectCard project={project} />
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
                 </div>
             </div>
         </section>

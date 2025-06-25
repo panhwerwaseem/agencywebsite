@@ -11,7 +11,7 @@ const ServiceTabs = ({
     tabsData = {},
     activeTab,
     setActiveTab,
-    className = ""
+    headClass = ""
 }) => {
 
     const currentTab = tabsData[activeTab]
@@ -23,7 +23,7 @@ const ServiceTabs = ({
     return (
         <div className={`service-tabs`}>
             <div className="container">
-                <div className="head-cont">
+                <div className={`head-cont ${headClass}`}>
                     <div className="head-pill">
                         <img src="/images/flower-white.svg" alt="" className="flwr-white" />
                         {headData.pill}
@@ -31,7 +31,7 @@ const ServiceTabs = ({
                     <h2 className="head-h2">
                         {headData.title} <span className="text-orange">{headData.highlightText}</span>
                     </h2>
-                    <p className="text-gray-900 text-center">
+                    <p className="text-gray-900 text-center max-w-[800px] mx-auto">
                         {headData.description}
                     </p>
                 </div>
@@ -42,12 +42,17 @@ const ServiceTabs = ({
                         <button
                             key={key}
                             onClick={() => setActiveTab(key)}
-                            className={`px-6 py-2 flex gap-2 items-center rounded-full border transition-all duration-300 ${activeTab === key
+                            className={`px-6 py-2 flex gap-2 items-center rounded-full border transition-all duration-300 tab-what active-tab-what ${activeTab === key
                                 ? 'bg-orange-500 text-white border-orange-500'
                                 : 'bg-transparent text-gray-900 border-gray-600 hover:border-orange-500 hover:text-orange-500'
                                 }`}
                         >
-                            <FaGlobe />
+                            {
+                                tab.icon ?
+                                    tab.icon
+                                    :
+                                    <FaGlobe />
+                            }
                             {tab.title}
                         </button>
                     ))}
@@ -78,7 +83,7 @@ const ServiceTabs = ({
                     <img
                         src={currentTab.image}
                         alt={currentTab.title}
-                        className="rounded-lg shadow-2xl w-full h-100 lg:col-span-3 aspect-video"
+                        className="rounded-lg shadow-2xl w-full h-full lg:col-span-3 aspect-video"
                     />
 
 
