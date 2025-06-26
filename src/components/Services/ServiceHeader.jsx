@@ -8,9 +8,10 @@ const ServiceHeader = ({ data, isSpanBlock = true }) => {
                 {data?.pill}
             </div>
             <h1>
-                <span className={`text-orange `}>
+                <span className={`text-orange  ${isSpanBlock ? 'block' : '!inline'}`}>
                     {data?.titleOrange}
                 </span>
+                {" "}
                 {
                     data?.title
                 }

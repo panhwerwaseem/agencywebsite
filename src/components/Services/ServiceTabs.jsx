@@ -37,13 +37,13 @@ const ServiceTabs = ({
                 </div>
 
                 {/* Main Tabs */}
-                <div className="flex flex-wrap justify-center gap-4 sm:my-12 my-8 max-w-4xl mx-auto">
+                <div className="flex md:flex-wrap justify-center gap-4 sm:my-12 my-8 max-w-4xl mx-auto overflow-x-auto sm:pb-0 pb-1.5">
                     {Object.entries(tabsData).map(([key, tab]) => (
                         <button
                             key={key}
                             onClick={() => setActiveTab(key)}
-                            className={`px-6 py-2 flex gap-2 items-center rounded-full border transition-all duration-300 tab-what active-tab-what ${activeTab === key
-                                ? 'bg-orange-500 text-white border-orange-500'
+                            className={`px-6 py-2 flex gap-2 items-center rounded-full border transition-all duration-300 font-space-grotesk tab-what ${activeTab === key
+                                ? 'bg-orange-500 text-white border-orange-500 active-tab-what '
                                 : 'bg-transparent text-gray-900 border-gray-600 hover:border-orange-500 hover:text-orange-500'
                                 }`}
                         >
@@ -53,7 +53,9 @@ const ServiceTabs = ({
                                     :
                                     <FaGlobe />
                             }
-                            {tab.title}
+                            <span className='whitespace-nowrap font-space-grotesk'>
+                                {tab.title}
+                            </span>
                         </button>
                     ))}
                 </div>
@@ -61,7 +63,7 @@ const ServiceTabs = ({
                 {/* Two Column Layout */}
                 <div className="grid lg:grid-cols-5 grid-cols-1 gap-5">
                     {/* Left Column - Services List */}
-                    <div className="results-tab lg:col-span-2">
+                    <div className="results-tab lg:col-span-2 lg:order-1 order-2">
                         {currentTab?.service && (
                             <>
                                 <div className="head-pill w-fit">
@@ -83,7 +85,7 @@ const ServiceTabs = ({
                     <img
                         src={currentTab.image}
                         alt={currentTab.title}
-                        className="rounded-lg shadow-2xl w-full h-full lg:col-span-3 aspect-video"
+                        className="rounded-lg shadow-2xl w-full h-full lg:col-span-3 aspect-video lg:order-2 order-1"
                     />
 
 

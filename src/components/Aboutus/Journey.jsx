@@ -29,19 +29,19 @@ const Journey = () => {
     return (
         <div className='about-us-main'>
             <div className="container">
-                <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-16 gap-10 lg:mb-28 mb-20">
-                    <img src="/images/abt-1.jpg" alt="" className='aspect-square rounded-xl' />
-                    <div className='flex flex-col justify-center'>
+                <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-16 gap-6 lg:mb-28 mb-6">
+                    <img src="/images/abt-1.jpg" alt="" className='aspect-square rounded-xl lg:order-1 order-2' />
+                    <div className='flex flex-col justify-center lg:order-2 order-1'>
                         <div className="head-pill w-fit">
                             <img src="/images/flower-white.svg" alt="" className="flwr-white" />
                             We’ve helped hundreds of companies
                         </div>
-                        <h3 className='lg:text-[56px] text-5xl font-space-grotesk font-bold text-white uppercase mt-7 mb-12'>
+                        <h3 className='lg:text-[56px] text-[34px] leading-[100%] font-space-grotesk font-bold text-white uppercase mt-7 lg:mb-12 mb-6'>
                             We’re only just getting started on <span className="text-orange">our journey</span>
                         </h3>
-                        <div className='grid grid-cols-2 lg:gap-12 gap-8'>
+                        <div className='grid grid-cols-2 lg:gap-12 gap-6'>
                             <div>
-                                <h4 className='lg:text-6xl text-5xl font-medium text-white mb-3'>
+                                <h4 className='lg:text-6xl text-3xl font-medium text-white mb-3'>
                                     400+
                                 </h4>
                                 <p className='text-gray-700'>
@@ -49,7 +49,7 @@ const Journey = () => {
                                 </p>
                             </div>
                             <div>
-                                <h4 className='lg:text-6xl text-5xl font-medium text-white mb-3'>
+                                <h4 className='lg:text-6xl text-3xl font-medium text-white mb-3'>
                                     100+
                                 </h4>
                                 <p className='text-gray-700'>
@@ -57,7 +57,7 @@ const Journey = () => {
                                 </p>
                             </div>
                             <div>
-                                <h4 className='lg:text-6xl text-5xl font-medium text-white mb-3'>
+                                <h4 className='lg:text-6xl text-3xl font-medium text-white mb-3'>
                                     8+
                                 </h4>
                                 <p className='text-gray-700'>
@@ -65,7 +65,7 @@ const Journey = () => {
                                 </p>
                             </div>
                             <div>
-                                <h4 className='lg:text-6xl text-5xl font-medium text-white'>
+                                <h4 className='lg:text-6xl text-3xl font-medium text-white mb-3'>
                                     50+
                                 </h4>
                                 <p className='text-gray-700'>

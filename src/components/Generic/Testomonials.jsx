@@ -75,13 +75,15 @@ const Testomonials = () => {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 1,
+                    variableWidth: true,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
+                    variableWidth: true,
                 }
             }
         ]
@@ -122,18 +124,18 @@ const Testomonials = () => {
                         WHAT OUR <span className="text-orange">CLIENTS SAYS</span>?
                     </h2>
                 </div>
-                <div className="relative mt-12">
+                <div className="relative md:mt-12 mt-5">
                     {/* Navigation Arrows */}
                     <button
                         onClick={prevSlide}
-                        className="absolute -left-10  -translate-y-1/2 z-10 testimonial-arrow"
+                        className="absolute md:-left-10 left-2  -translate-y-1/2 z-10 testimonial-arrow"
                     >
                         <FaArrowLeftLong />
                     </button>
 
                     <button
                         onClick={nextSlide}
-                        className="absolute -right-10 -translate-y-1/2 z-10 testimonial-arrow"
+                        className="absolute md:-right-10 right-2 -translate-y-1/2 z-10 testimonial-arrow"
                     >
                         <FaArrowRightLong />
                     </button>
@@ -141,7 +143,7 @@ const Testomonials = () => {
                     {/* Main Testimonials Slider */}
                     <Slider ref={mainSliderRef} {...mainSliderSettings}>
                         {testimonials.map((testimonial) => (
-                            <div key={testimonial.id} className="px-8">
+                            <div key={testimonial.id} className="md:px-8">
                                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-7">
                                     {/* Text Testimonial */}
                                     <div className="testimonial-text">
@@ -188,10 +190,10 @@ const Testomonials = () => {
                     </Slider>
 
                     {/* Avatar Navigation */}
-                    <div className="mt-7 px-5">
+                    <div className="md:mt-7 mt-14 md:px-5">
                         <Slider ref={avatarSliderRef} {...avatarSliderSettings}>
                             {testimonials.map((testimonial, index) => (
-                                <div key={testimonial.id} className="px-3">
+                                <div key={testimonial.id} className="px-3 w-[220px]">
                                     <div
                                         className={`testimonial-avatar ${currentSlide === index ? 'active' : ''}`}
                                         onClick={() => goToSlide(index)}

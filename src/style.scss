@@ -237,6 +237,7 @@ p {
     font-weight: 600;
     text-decoration: none;
     transition: .3s all ease;
+    height: 58px;
 
     span {
         width: 45px;
@@ -337,7 +338,7 @@ p {
 .abt-insights {
     position: relative;
     background-color: #1B1B1B;
-    padding: 28px 28px 0;
+    padding: 28px 28px;
     border-radius: 12px;
     border: 1px solid #FFFFFF14;
     color: #fff;
@@ -582,6 +583,7 @@ p {
     height: 100%;
     cursor: pointer;
     transition: .3s all ease;
+    width: 400px;
 
     &:hover {
         .project-details {
@@ -800,6 +802,7 @@ p {
     top: 0;
     z-index: 1000;
     padding: 16px 20px;
+    border: 0;
 
     .navbar-container {
         max-width: 1320px;
@@ -1051,12 +1054,12 @@ p {
         left: 0;
         width: 100%;
         background-color: #1a1a1a;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
 
         &.mobile-menu-open {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             max-height: 500px;
         }
 
@@ -1258,6 +1261,30 @@ nav input {
             }
         }
     }
+
+    &.portfolio {
+        .container {
+            >img {
+
+                &:nth-of-type(1) {
+                    width: 980px;
+                    height: 630px;
+                    top: -120px;
+                    left: -420px;
+                }
+
+                &:nth-of-type(2) {
+                    top: -160px;
+                    right: -80px;
+                }
+
+                &:nth-of-type(3) {
+                    bottom: 60px;
+                    right: -50px;
+                }
+            }
+        }
+    }
 }
 
 .service-header {
@@ -1315,6 +1342,10 @@ nav input {
 .service-steps {
     background-color: #121212;
     padding: 0 0 180px;
+
+    img {
+        object-fit: cover;
+    }
 }
 
 .left-step {
@@ -1485,15 +1516,7 @@ nav input {
 .software-development-card {
     width: 556px;
 
-    @media (max-width: 768px) {
-        width: 370px;
-    }
 
-    img {
-        height: 430px;
-        border-radius: 36px;
-        object-fit: cover;
-    }
 }
 
 .recent-work-section {
@@ -1694,5 +1717,392 @@ nav input {
         align-items: center;
 
         img {}
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 12px;
+
+        .navbar-container {
+            background-color: transparent;
+        }
+    }
+
+    .home-page {
+        padding: 0 0 50px;
+
+        .home-header {
+            h1 {
+                font-size: 34px;
+                line-height: 44px;
+            }
+
+            .clients {
+                position: static;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+        }
+
+        >img {
+            &:nth-of-type(3) {
+                display: none;
+            }
+
+            &:nth-of-type(2) {
+                top: 200px;
+            }
+        }
+    }
+
+    .rotating-circle-btn>svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hdr-btm {
+        flex-wrap: wrap;
+    }
+
+    .btn-orange,
+    .btn-gray {
+        font-size: 12px;
+
+        >span {
+            width: 26px;
+            height: 26px;
+            font-size: 14px;
+        }
+    }
+
+    .head-cont {
+        gap: 20px;
+    }
+
+    .head-h2 {
+        font-size: 34px;
+    }
+
+    .head-pill {
+        font-size: 12px;
+    }
+
+    .trust-img {
+        width: 90px;
+        height: 40px;
+        padding: 4px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us {
+        padding: 50px 0;
+    }
+
+    .abt-card {
+        padding: 16px 16px 0;
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .abt-insights {
+        min-height: 200px;
+
+        h4 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .what-we-do {
+        padding-bottom: 80px;
+    }
+
+    .project-card {
+        width: 240px;
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .project-details {
+            span {
+                width: 42px;
+                height: 42px;
+            }
+
+            h4 {
+                font-size: 16px;
+            }
+
+            p {
+                display: none;
+            }
+        }
+    }
+
+    .projects-section {
+        background: linear-gradient(to bottom, #FC5E14 60%, #121212 60%);
+        padding: 0;
+
+        &::before {
+            top: -56px;
+            background-size: 670px;
+            background-repeat: no-repeat;
+        }
+
+        &::after {
+            background-size: 670px;
+            background-repeat: no-repeat;
+            bottom: -60px;
+        }
+
+        .project-inner {
+            padding: 40px 0;
+
+            .view-all-btn {
+                display: none;
+            }
+        }
+
+        .projects-header {
+            >div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .projects-badge {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .testimonials {
+        padding: 50px 0;
+
+        .testimonial-arrow {
+            top: calc(100% - 115px);
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .lets-talk {
+        padding: 0 0 50px;
+
+        &::before {
+            content: none;
+        }
+    }
+
+    .faqs-section {
+        padding: 0 0 50px;
+    }
+
+    .service-page {
+        padding: 0 0 50px;
+
+        .container {
+            >img:nth-of-type(3) {
+                right: -60px;
+            }
+        }
+    }
+
+    .service-header {
+        h1 {
+            font-size: 34px;
+            line-height: 44px;
+        }
+    }
+
+    .service-tabs {
+        padding: 50px 0;
+    }
+
+    .results-tab {
+        padding: 16px;
+    }
+
+    .left-step {
+        .number {
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            right: unset;
+            left: -38px;
+            bottom: unset;
+            top: -190px;
+        }
+
+        &::before {
+            left: -24px;
+            right: unset;
+        }
+
+        &.last {
+            &::before {
+                content: none;
+            }
+        }
+
+        &.first {
+            &::before {
+                height: calc(100% + 60px);
+                bottom: -60px;
+            }
+        }
+    }
+
+    .right-step {
+        .number {
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            right: unset;
+            left: -38px;
+            bottom: unset;
+            top: -190px;
+        }
+
+        &::before {
+            left: -24px;
+            right: unset;
+        }
+
+
+    }
+
+    .left-step-img {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -24px;
+            top: 0;
+            border-left: 2px dashed #FFFFFF14;
+            height: 100%;
+            width: 1px;
+        }
+    }
+
+    .right-step-img {
+        position: relative;
+
+        &.first {
+            &::before {
+                height: 50%;
+                top: unset;
+                bottom: -20px;
+            }
+        }
+
+        &.last {
+            &::before {
+                height: 50%;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -24px;
+            top: 0;
+            border-left: 2px dashed #FFFFFF14;
+            height: 100%;
+            width: 1px;
+        }
+    }
+
+    .active-step {
+        .left-step-img {
+            &::before {
+                border-left: 2px dashed #FC5E14;
+            }
+        }
+
+        .right-step-img {
+            &::before {
+                border-left: 2px dashed #FC5E14;
+            }
+        }
+    }
+
+    .service-steps {
+        padding: 0 0 80px;
+    }
+
+    .ess-card {
+        padding: 16px;
+
+        .ess-icon {
+            width: 44px;
+            height: 44px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        h3 {
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        .ess-description {
+            font-size: 14px;
+        }
+    }
+
+    .showcase-section {
+        padding: 50px 0;
+    }
+
+    .btn-white {
+        height: 40px;
+    }
+
+    .case-study-card,
+    .mobile-app-card,
+    .software-development-card {
+        width: 260px;
+
+        img {
+            height: 300px;
+        }
+    }
+
+    .logos-section,
+    .software-development-section {
+        padding: 50px 0;
+    }
+
+    .logos-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-us-main {
+        padding: 50px 0;
+    }
+
+    .right-way {
+        padding: 0 0 50px;
     }
 }

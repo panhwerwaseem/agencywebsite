@@ -44,7 +44,7 @@ const TrustedBy = () => {
                     </p>
                 </div>
             </div>
-            <div className="sm:mt-[50px] mt-[32px] mb-7">
+            <div className="sm:mt-[50px] mt-[32px] sm:mb-7 mb-4">
                 <Marquee speed={20} gradient={false} pauseOnHover={true} autoFill={true}>
                     {logos.map((src, index) => (
                         <div key={index} className='trust-img mx-[12px]'>

@@ -66,7 +66,7 @@ const Navbar = () => {
         'digital-marketing': [
             {
                 name: "SEO Optimization",
-                route: "/digital-marketing"
+                route: "/service/digital-marketing"
             },
             {
                 name: "Google Ads",
@@ -100,7 +100,7 @@ const Navbar = () => {
         'app-development': [
             {
                 name: "iOS Apps",
-                route: "/mob-archieves"
+                route: "/service/app-development"
             },
             {
                 name: "Android Apps",
@@ -108,7 +108,7 @@ const Navbar = () => {
             },
             {
                 name: "React Native",
-                route: ""
+                route: "/mob-archieves"
             },
             {
                 name: "Flutter",
@@ -134,7 +134,7 @@ const Navbar = () => {
         'software-development': [
             {
                 name: "Custom Software",
-                route: "/software-development"
+                route: "/service/software-development"
             },
             {
                 name: "API Development",

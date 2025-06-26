@@ -52,37 +52,21 @@ const Projects = ({ className }) => {
     ]
 
     const sliderSettings = {
-        dots: false,
+        dots: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 3,
+        speed: 1200,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
+        variableWidth: true,
         arrows: false,
-        // prevArrow: <PrevArrow />,
-        // nextArrow: <NextArrow />,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-        ]
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 4000
     }
 
     return (
         <section className="projects-section">
-            <div className="project-inner">
+            <div className="project-inner overflow-hidden">
                 <div className="container">
                     <div className="projects-header">
                         <div>
@@ -96,7 +80,7 @@ const Projects = ({ className }) => {
                         <button className="view-all-btn">View All Projects</button>
                     </div>
 
-                    <div className="projects-slider">
+                    <div className="projects-slider w-[2490px]">
                         <Slider {...sliderSettings}>
                             {projectsData.map((project) => (
                                 <div key={project.id} className="project-slide">

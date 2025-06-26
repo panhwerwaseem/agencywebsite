@@ -71,8 +71,8 @@ const SoftwareDevelopmentPage = () => {
                                 <div className='software-development-card-sub'>
                                     <img src={item.img} alt={item.title} className='w-full h-full object-cover' />
                                     <div className='software-development-card-content text-center'>
-                                        <h3 className='text-brand-orange font-space-grotesk text-lg mb-5'>{item.title}</h3>
-                                        <h4 className='font-space-grotesk text-3xl text-white'>{item.description}</h4>
+                                        <h3 className='text-brand-orange font-space-grotesk text-lg lg:mt-7 lg:mb-5 mt-5 mb-3'>{item.title}</h3>
+                                        <h4 className='font-space-grotesk lg:text-3xl text-2xl text-white'>{item.description}</h4>
                                         {/* <a href={item.link} className='btn-white'>
                                     View Case Study
                                 </a> */}

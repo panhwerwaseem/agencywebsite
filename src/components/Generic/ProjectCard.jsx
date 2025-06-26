@@ -15,7 +15,7 @@ const ProjectCard = ({ project }) => {
                 </span>
             </div>
             <div className="project-image">
-                <img src={project.image} alt={project.title} className='rounded-lg h-[260px] w-full' />
+                <img src={project.image} alt={project.title} className='rounded-lg md:h-[260px] h-full w-full' />
             </div>
         </div>
     )

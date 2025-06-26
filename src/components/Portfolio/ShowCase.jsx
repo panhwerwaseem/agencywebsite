@@ -19,27 +19,27 @@ const ShowCase = () => {
                 </div>
 
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 lg:my-16 my-10 min-h-[600px]">
-                    <div className='grid grid-flow-col grid-rows-2 gap-5'>
-                        <img src="/images/showcase-1.jpg" alt="" className='w-full h-full object-cover rounded-xl' />
-                        <img src="/images/showcase-2.jpg" alt="" className='w-full h-full object-cover rounded-xl' />
+                    <div className='grid lg:grid-flow-col lg:grid-rows-2 lg:grid-cols-none grid-cols-2 gap-5'>
+                        <img src="/images/showcase-1.jpg" alt="" className='w-full h-full object-cover rounded-xl aspect-square lg:aspect-auto' />
+                        <img src="/images/showcase-2.jpg" alt="" className='w-full h-full object-cover rounded-xl aspect-square lg:aspect-auto' />
                     </div>
 
                     <div className=''>
                         <img src="/images/showcase-3.jpg" alt="" className='w-full h-full object-cover rounded-xl' />
                     </div>
 
-                    <div className='grid grid-flow-col grid-rows-5 gap-5'>
-                        <img src="/images/showcase-1.jpg" alt="" className='w-full h-full object-cover rounded-xl row-span-2' />
-                        <img src="/images/showcase-2.jpg" alt="" className='w-full h-full object-cover rounded-xl row-span-3' />
+                    <div className='grid lg:grid-flow-col lg:grid-rows-5 lg:grid-cols-none grid-cols-2 gap-5'>
+                        <img src="/images/showcase-1.jpg" alt="" className='w-full h-full object-cover rounded-xl lg:row-span-2 aspect-square lg:aspect-auto' />
+                        <img src="/images/showcase-2.jpg" alt="" className='w-full h-full object-cover rounded-xl lg:row-span-3 aspect-square lg:aspect-auto' />
                     </div>
 
-                    <div className='grid grid-flow-col grid-rows-5 gap-5'>
-                        <img src="/images/showcase-1.jpg" alt="" className='w-full h-full object-cover rounded-xl row-span-3' />
-                        <img src="/images/showcase-2.jpg" alt="" className='w-full h-full object-cover rounded-xl row-span-2' />
+                    <div className='grid lg:grid-flow-col lg:grid-rows-5 lg:grid-cols-none grid-cols-2 gap-5'>
+                        <img src="/images/showcase-1.jpg" alt="" className='w-full h-full object-cover rounded-xl lg:row-span-3 aspect-square lg:aspect-auto' />
+                        <img src="/images/showcase-2.jpg" alt="" className='w-full h-full object-cover rounded-xl lg:row-span-2 aspect-square lg:aspect-auto' />
                     </div>
                 </div>
 
-                <a href="/portfolio/our-portfolio" className="btn-white w-fit mx-auto h-[58px] px-5">
+                <a href="/portfolio/our-portfolio" className="btn-white w-fit mx-auto px-5">
                     View All Projects
                 </a>
             </div>

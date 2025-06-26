@@ -123,7 +123,7 @@ const WhatWeDo = () => {
                 </div>
 
                 {/* Main Tabs */}
-                <div className="flex flex-wrap justify-center gap-4 sm:my-12 my-8">
+                <div className="flex md:flex-wrap md:justify-center gap-4 sm:my-12 my-8 overflow-x-auto sm:pb-0 pb-1.5">
                     {Object.entries(tabsData).map(([key, tab]) => (
                         <button
                             key={key}
@@ -139,24 +139,26 @@ const WhatWeDo = () => {
                             {
                                 tab.icon
                             }
-                            {tab.title}
+                            <span className='whitespace-nowrap'>
+                                {tab.title}
+                            </span>
                         </button>
                     ))}
                 </div>
 
-                <div className="relative">
+                <div className="relative md:block flex gap-5 flex-col">
                     <div className="what-we-services-tab">
                         {currentTab.services.map((service, index) => (
                             <div
                                 key={service.id}
                                 onClick={() => setActiveService(service.id)}
-                                className={`flex items-center lg:gap-10 md:gap-8 gap-6 py-9 cursor-pointer transition-all duration-300`}
+                                className={`flex items-center lg:gap-10 md:gap-8 gap-6 md:py-9 py-5 cursor-pointer transition-all duration-300`}
                             >
                                 <div className={`md:text-4xl text-2xl font-bold ${activeService === service.id ? 'text-white' : 'text-gray-900'}`}>
                                     {String(index + 1).padStart(2, '0')}
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className={`md:text-4xl text-2xl font-semibold flex items-center gap-2 ${activeService === service.id ? 'text-white' : 'text-gray-900'
+                                    <h3 className={`md:text-4xl text-xl font-semibold flex items-center gap-2 ${activeService === service.id ? 'text-white' : 'text-gray-900'
                                         }`}>
                                         {service.name}
                                         {
@@ -171,7 +173,7 @@ const WhatWeDo = () => {
                     </div>
 
                     {/* Right Side - Image */}
-                    <div className="flex justify-center absolute top-4 right-10 max-w-[450px] h-[430px] rotate-3">
+                    <div className="flex justify-center md:absolute top-4 right-10 max-w-[450px] md:h-[430px] rotate-3">
                         <div className="relative">
                             <img
                                 src={currentImage}

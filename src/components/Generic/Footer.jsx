@@ -12,11 +12,11 @@ const Footer = () => {
     }
 
     return (
-        <footer className="bg-[#0A0A0A] text-gray-700 pt-12">
+        <footer className="bg-[#0A0A0A] text-gray-700 md:pt-12 pt-5">
             <div className="container ">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-8 gap-5">
                     {/* Logo and Description */}
-                    <div className="space-y-4">
+                    <div className="space-y-2 md:space-y-4">
                         <img src="/images/logo.png" alt="" className="footer-logo h-10 w-32" />
                         <p className="">
                             We do it fast, we do it right, and we do it for people who are ready to grow.
@@ -24,9 +24,9 @@ const Footer = () => {
                     </div>
 
                     {/* Quick Links */}
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         <h3 className="text-white font-bold text-lg font-space-grotesk">QUICK LINKS</h3>
-                        <ul className="space-y-5">
+                        <ul className="space-y-3 md:space-y-5">
                             <li><a href="#" className="footer-link">Home</a></li>
                             <li><a href="#" className="footer-link">Services</a></li>
                             <li><a href="#" className="footer-link">Work</a></li>
@@ -36,9 +36,9 @@ const Footer = () => {
                     </div>
 
                     {/* Services */}
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         <h3 className="text-white font-bold text-lg font-space-grotesk">SERVICES</h3>
-                        <ul className="space-y-5">
+                        <ul className="space-y-3 md:space-y-5">
                             <li><a href="#" className="footer-link">Web Development</a></li>
                             <li><a href="#" className="footer-link">Software Development</a></li>
                             <li><a href="#" className="footer-link">Mobile Apps Development</a></li>
@@ -74,9 +74,9 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Section */}
-                <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div className="border-t border-gray-800 md:mt-12 mt-8 md:pt-8 pt-5 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-gray-700 text-sm">© 2025 All Rights Reserved.</p>
-                    <div className="flex space-x-6 mt-4 md:mt-0">
+                    <div className="flex space-x-6 mt-2 md:mt-0">
                         <a href="#" className="footer-link">Privacy Policy</a>
                         <a href="#" className="footer-link">Terms & Conditions</a>
                     </div>

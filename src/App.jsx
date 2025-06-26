@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Home from './pages/Home'
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
-import { DigitalMarketing, SoftwareDevelopment, WebDevelopment } from './pages/Services'
+import { AppDevelopment, DigitalMarketing, SoftwareDevelopment, WebDevelopment } from './pages/Services'
 import { OurPortfolio, Portfolio } from './pages/Portfolio'
 import MobArchieves from './pages/MobileArchieves/MobArchieves'
 import SoftwareDevelopmentPage from './pages/SoftwareDevelopment/SoftwareDevelopmentPage'
@@ -22,6 +22,7 @@ function App() {
         <Route path="/service/web-development" element={<WebDevelopment />} />
         <Route path="/service/software-development" element={<SoftwareDevelopment />} />
         <Route path="service/digital-marketing" element={<DigitalMarketing />} />
+        <Route path="service/app-development" element={<AppDevelopment />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/our-portfolio" element={<OurPortfolio />} />
         <Route path="/mob-archieves" element={<MobArchieves />} />

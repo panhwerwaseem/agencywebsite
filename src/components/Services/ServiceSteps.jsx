@@ -49,9 +49,11 @@ const ServiceSteps = ({ stepsData }) => {
                                     key={index}
                                     ref={el => stepRefs.current[index] = el}
                                     data-index={index}
-                                    className={`grid lg:grid-cols-2 grid-cols-1 gap-[230px] my-12 ${isActive ? 'active-step' : ''}`}
+                                    className={`grid lg:grid-cols-2 grid-cols-1 lg:gap-[230px] gap-6 md:my-12 my-8 lg:pl-0 pl-6 ${isActive ? 'active-step' : ''}`}
                                 >
-                                    <img src={step?.image} alt={step?.title} className='rounded-xl aspect-square max-h-[420px] w-full' />
+                                    <div className='left-step-img w-full'>
+                                        <img src={step?.image} alt={step?.title} className='rounded-xl aspect-square max-h-[420px] w-full' />
+                                    </div>
                                     <div className="right-step flex flex-col gap-4 justify-center ">
                                         <span className="number">{step?.number}</span>
                                         <h3 className='text-3xl font-space-grotesk text-white'>{step?.title}</h3>
@@ -65,14 +67,16 @@ const ServiceSteps = ({ stepsData }) => {
                                     key={index}
                                     ref={el => stepRefs.current[index] = el}
                                     data-index={index}
-                                    className={`grid lg:grid-cols-2 grid-cols-1 gap-[230px] ${isActive ? 'active-step' : ''}`}
+                                    className={`grid lg:grid-cols-2 grid-cols-1 lg:gap-[230px] gap-6 lg:pl-0 pl-6 ${isActive ? 'active-step' : ''}`}
                                 >
-                                    <div className={`left-step flex flex-col gap-4 justify-center ${step?.number == '01' ? 'first' : step?.number == '05' ? 'last' : ''}`}>
+                                    <div className={`left-step flex flex-col gap-4 justify-center lg:order-1 order-2 ${step?.number == '01' ? 'first' : step?.number == '05' ? 'last' : ''}`}>
                                         <span className="number">{step?.number}</span>
                                         <h3 className='text-3xl font-space-grotesk text-white'>{step?.title}</h3>
                                         <p className='text-gray-700'>{step?.description}</p>
                                     </div>
-                                    <img src={step?.image} alt={step?.title} className='rounded-xl aspect-square max-h-[420px] w-full' />
+                                    <div className={`right-step-img w-full lg:order-2 order-1 ${step?.number == '01' ? 'first' : step?.number == '05' ? 'last' : ''}`}>
+                                        <img src={step?.image} alt={step?.title} className='rounded-xl aspect-square max-h-[420px] w-full' />
+                                    </div>
                                 </div>
                             )
                         }

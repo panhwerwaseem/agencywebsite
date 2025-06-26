@@ -294,7 +294,7 @@ const DigitalMarketing = () => {
             <ServiceTabs headData={headData} tabsData={tabsData} activeTab={activeTab} setActiveTab={setActiveTab} headClass="max-w-[880px]" />
             <ServiceSteps stepsData={stepsData[activeTab]} />
             <ServiceEssentianls headData={essentianlsData} essentialSteps={essentialSteps} />
-            <div className='pt-[120px] bg-brand-dark'>
+            <div className='lg:pt-[120px] pt-[50px] bg-brand-dark'>
                 <FAQs />
             </div>
             <ServiceCoversion />

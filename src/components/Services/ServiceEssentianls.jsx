@@ -16,7 +16,7 @@ const ServiceEssentianls = ({ headData, essentialSteps }) => {
                         {headData.description}
                     </p>
                 </div>
-                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 mt-12">
+                <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 lg:mt-12 md:mt-8 mt-5">
                     {essentialSteps.map((step, index) => (
                         <div key={index} className="ess-card">
                             <div className="ess-icon">

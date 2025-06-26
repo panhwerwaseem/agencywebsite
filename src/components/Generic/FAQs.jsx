@@ -102,7 +102,7 @@ const FAQs = () => {
                                         transition: 'background-color 0.3s ease',
                                         margin: '0',
                                         '&.Mui-expanded': {
-                                            // minHeight: '64px',
+                                            minHeight: 'auto',
                                             borderBottomLeftRadius: '0',
                                             borderBottomRightRadius: '0',
                                         },
@@ -113,12 +113,12 @@ const FAQs = () => {
                                 >
                                     <Typography
                                         sx={{
-                                            fontSize: '20px',
                                             fontWeight: '600',
                                             color: 'white',
                                             lineHeight: '1.4',
                                             margin: '0'
                                         }}
+                                        className='md:text-xl text-base font-space-grotesk !m-0'
                                     >
                                         {faq.question}
                                     </Typography>

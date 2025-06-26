@@ -13,17 +13,17 @@ const ServiceCoversion = () => {
                         Let’s make your website work harder than you do, attracting new customers, building trust and driving revenue.
                     </p>
                     <div className="btn-group justify-center">
-                        <a href="" className="btn-orange w-fit">
+                        <a href="/portfolio" className="btn-orange w-fit">
                             <span >
                                 <FaArrowRightLong className='-rotate-45' />
                             </span>
                             Portfolio
                         </a>
-                        <a href="" className="btn-orange btn-orange-outline w-fit">
+                        <a href="/about-us" className="btn-orange btn-orange-outline w-fit">
                             <span >
                                 <FaArrowRightLong className='-rotate-45' />
                             </span>
-                            Portfolio
+                            About Us
                         </a>
                     </div>
                 </div>
