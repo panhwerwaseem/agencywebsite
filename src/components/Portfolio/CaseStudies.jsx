@@ -4,7 +4,6 @@ import Slider from 'react-slick'
 const CaseStudies = () => {
 
     const settings = {
-        dots: true,
         infinite: true,
         speed: 1200,
         slidesToShow: 1,

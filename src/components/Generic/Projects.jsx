@@ -52,7 +52,6 @@ const Projects = ({ className }) => {
     ]
 
     const sliderSettings = {
-        dots: true,
         infinite: true,
         speed: 1200,
         slidesToShow: 1,

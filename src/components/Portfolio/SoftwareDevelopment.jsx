@@ -3,7 +3,6 @@ import Slider from 'react-slick'
 
 const SoftwareDevelopment = () => {
     const settings = {
-        dots: true,
         infinite: true,
         speed: 1200,
         slidesToShow: 1,
