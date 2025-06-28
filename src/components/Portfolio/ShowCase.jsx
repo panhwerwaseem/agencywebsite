@@ -4,7 +4,7 @@ const ShowCase = () => {
     return (
         <div className='showcase-section'>
             <div className="container">
-                <div className="head-cont">
+                <div className="head-cont gap-5">
 
                     <div className="head-pill">
                         <img src="/images/flower-white.svg" alt="" className="flwr-white" />

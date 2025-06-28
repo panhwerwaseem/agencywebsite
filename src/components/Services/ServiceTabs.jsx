@@ -11,7 +11,9 @@ const ServiceTabs = ({
     tabsData = {},
     activeTab,
     setActiveTab,
-    headClass = ""
+    headClass = "",
+    isEqualBox = false,
+    tabsWidth
 }) => {
 
     const currentTab = tabsData[activeTab]
@@ -37,7 +39,7 @@ const ServiceTabs = ({
                 </div>
 
                 {/* Main Tabs */}
-                <div className="flex md:flex-wrap justify-center gap-4 sm:my-12 my-8 max-w-4xl mx-auto overflow-x-auto sm:pb-0 pb-1.5">
+                <div className={`flex md:flex-wrap justify-center gap-4 sm:my-12 my-8 max-w-5xl mx-auto overflow-x-auto sm:pb-0 pb-1.5 ${tabsWidth ? tabsWidth : ""}`}>
                     {Object.entries(tabsData).map(([key, tab]) => (
                         <button
                             key={key}
@@ -61,9 +63,9 @@ const ServiceTabs = ({
                 </div>
 
                 {/* Two Column Layout */}
-                <div className="grid lg:grid-cols-5 grid-cols-1 gap-5">
+                <div className={`grid ${isEqualBox ? 'lg:grid-cols-2' : 'lg:grid-cols-5'} grid-cols-1 gap-5`}>
                     {/* Left Column - Services List */}
-                    <div className="results-tab lg:col-span-2 lg:order-1 order-2">
+                    <div className={`results-tab ${!isEqualBox ? 'lg:col-span-2' : ''} lg:order-1 order-2`}>
                         {currentTab?.service && (
                             <>
                                 <div className="head-pill w-fit">
@@ -85,7 +87,7 @@ const ServiceTabs = ({
                     <img
                         src={currentTab.image}
                         alt={currentTab.title}
-                        className="rounded-lg shadow-2xl w-full h-full lg:col-span-3 aspect-video lg:order-2 order-1"
+                        className={`rounded-lg shadow-2xl w-full h-full ${!isEqualBox ? 'lg:col-span-3' : ''} aspect-video lg:order-2 order-1`}
                     />
 
 

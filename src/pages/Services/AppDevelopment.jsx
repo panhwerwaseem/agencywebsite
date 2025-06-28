@@ -229,31 +229,31 @@ const AppDevelopment = () => {
     }
 
     const essentianlsData = {
-        pill: "Level Up Your Sales Game",
-        title: "Essential Features",
-        highlightText: "for Your Success",
-        description: "Boost your brand's presence with engaging content, smart strategies, and consistent growth across all major platforms. We turn followers into loyal customers through impactful social media marketing."
+        pill: "See It Yourself",
+        title: "The Value We Bring To",
+        highlightText: "Your Business",
+        description: "Boost your brand’s presence with engaging content, smart strategies, and consistent growth across all major platforms. We turn followers into loyal customers through impactful social media marketing."
     }
 
     const essentialSteps = [
         {
-            title: "Scalability",
-            description: "Our solutions are designed to grow with your business, accommodating future needs.",
+            title: "IOS App Development",
+            description: "We design, develop, and deploy native iOS apps for iPhone, iPad, and Apple Watch.",
             image: "/images/essential-soft-1.svg"
         },
         {
-            title: "Security and Reliability",
-            description: "We employ robust security measures to safeguard your customer data, including encryption, firewalls.",
+            title: "UI/UX Design",
+            description: "Our expert designers create intuitive and visually appealing interfaces that enhance user experience.",
             image: "/images/essential-soft-2.svg"
         },
         {
-            title: "Seamless Integration",
-            description: "Our POS systems seamlessly integrate with your existing business operations.",
+            title: "App Maintenance",
+            description: "We provide ongoing support and maintenance to ensure your app’s performance and reliability.",
             image: "/images/essential-soft-3.svg"
         },
         {
-            title: "Real-time Insights",
-            description: "Gain valuable insights into sales performance, inventory levels, and customer behavior.",
+            title: "App Store Optimization",
+            description: "We optimize your app’s visibility in the App Store to attract more downloads and increase user engagement.",
             image: "/images/essential-soft-4.svg"
         }
     ]
@@ -272,7 +272,7 @@ const AppDevelopment = () => {
                 </div>
             </div>
             <TrustedBy />
-            <ServiceTabs headData={headData} tabsData={tabsData} activeTab={activeTab} setActiveTab={setActiveTab} headClass="max-w-[800px]" />
+            <ServiceTabs headData={headData} tabsData={tabsData} activeTab={activeTab} setActiveTab={setActiveTab} headClass="max-w-[800px]" tabsWidth={'!max-w-[1130px]'} />
             <ServiceSteps stepsData={stepsData[activeTab]} />
             <ServiceEssentianls headData={essentianlsData} essentialSteps={essentialSteps} />
             <div className='lg:pt-[120px] pt-[50px] bg-brand-dark'>

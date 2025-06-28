@@ -2,6 +2,7 @@ import React from 'react'
 import ServiceHeader from '../../components/Services/ServiceHeader'
 import Navbar from '../../components/Generic/Navbar'
 import Footer from '../../components/Generic/Footer'
+import { Link } from 'react-router-dom'
 
 const MobArchieves = () => {
 
@@ -87,7 +88,7 @@ const MobArchieves = () => {
                         {
                             data?.map((item, index) => {
                                 return (
-                                    <div className='mobile-app-card-sub'>
+                                    <Link to="/mob-archieves/travelica" className='mobile-app-card-sub'>
                                         <img src={item.img} alt={item.title} className='w-full h-full object-cover' />
                                         <div className='mobile-app-card-content text-center'>
                                             <h3 className='text-brand-orange font-space-grotesk text-lg lg:mt-7 lg:mb-5 mt-5 mb-3'>{item.title}</h3>
@@ -96,7 +97,7 @@ const MobArchieves = () => {
                             View Case Study
                         </a> */}
                                         </div>
-                                    </div>
+                                    </Link>
                                 )
                             })
                         }

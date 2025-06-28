@@ -57,13 +57,15 @@ const Footer = () => {
                             </a>
                         </div>
                         <form onSubmit={handleEmailSubmit} className="footer-form">
-                            <input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Enter your Email"
-                                required
-                            />
+                            <label htmlFor="">
+                                <input
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Enter your Email"
+                                    required
+                                />
+                            </label>
                             <button
                                 type="submit"
                             >

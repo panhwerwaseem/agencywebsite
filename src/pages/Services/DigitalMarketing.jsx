@@ -15,7 +15,7 @@ const DigitalMarketing = () => {
         pill: "Our Services",
         titleOrange: "DIGITAL",
         title: "MARKETING",
-        description: "Feeling invisible online? A well-designed website gets you noticed and builds trust and credibility. See how we've transformed businesses with growth-driven website designs. "
+        description: "At WizSpeed, we turn clicks into customers through smart, strategic marketing. From SEO and social media to paid campaigns and content, we help you grow faster, rank higher, and connect deeper with your audience."
     }
 
     const tabsData = {

@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Manrope', sans-serif;
+    background-color: #121212;
 }
 
 img {
@@ -141,15 +142,18 @@ p {
 
 .btn-orange {
     background-color: #FC5E14;
-    padding: 8px 12px 8px 8px;
+    padding: 8px 18px 8px 8px;
     border-radius: 8px;
     color: #fff;
     display: flex;
     gap: 12px;
     align-items: center;
-    font-weight: 600;
+    justify-content: center;
+    font-weight: 700;
     text-decoration: none;
     transition: .3s all ease;
+    // min-width: 200px;
+    font-size: 14px;
 
     span {
         width: 45px;
@@ -190,15 +194,18 @@ p {
 
 .btn-gray {
     background-color: #404040;
-    padding: 8px 12px 8px 8px;
+    padding: 8px 20px;
     border-radius: 8px;
     color: #fff;
     display: flex;
     gap: 12px;
     align-items: center;
-    font-weight: 600;
+    justify-content: center;
+    font-weight: 700;
     text-decoration: none;
     transition: .3s all ease;
+    // min-width: 200px;
+    font-size: 14px;
 
     span {
         width: 45px;
@@ -289,6 +296,7 @@ p {
     display: flex;
     align-items: center;
     gap: 12px;
+    font-size: 18px;
 }
 
 .head-h2 {
@@ -432,7 +440,7 @@ p {
     &::before {
         content: "";
         @apply absolute top-[-120px] left-0 w-full h-[200px];
-        background: url("/images/projects-bg.png");
+        background: linear-gradient(to bottom, transparent 0%, #121212 80%), url(/images/projects-bg.png);
         z-index: -1;
     }
 
@@ -467,7 +475,7 @@ p {
             color: #fff;
             font-size: 48px;
             font-weight: 700;
-            line-height: 1.2;
+            line-height: 100%;
             margin-bottom: 20px;
             font-family: 'Space Grotesk', sans-serif;
             letter-spacing: -0.02em;
@@ -570,6 +578,31 @@ p {
     }
 }
 
+.projects-avatar {
+    margin-bottom: 24px;
+
+    img {
+        margin-right: -24px;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        transition: .3s all ease;
+
+        @media (max-width: 768px) {
+            width: 45px;
+            height: 45px;
+        }
+
+        &:hover {
+            &:not(:nth-last-of-type(1)) {
+                margin-right: -0px;
+                transition: .3s all ease;
+            }
+        }
+
+    }
+}
+
 // Project Card Styles
 .project-card {
     background-color: #1B1B1B;
@@ -617,7 +650,7 @@ p {
     .project-details {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: end;
         gap: 12px;
         margin: 32px 0 24px;
 
@@ -757,13 +790,10 @@ p {
 }
 
 .footer-form {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    justify-content: space-between;
     background-color: #171717;
     padding: 4px;
     border-radius: 8px;
+    position: relative;
 
     input {
         background-color: transparent;
@@ -771,8 +801,9 @@ p {
         outline: none;
         color: #fff;
         height: 50px;
-        flex: 1;
+        // flex: 1;
         padding: 0 12px;
+        width: calc(100% - 80px);
     }
 
     button {
@@ -786,6 +817,9 @@ p {
         align-items: center;
         border-radius: 8px;
         transition: .3s all ease;
+        position: absolute;
+        right: 4px;
+        top: 4px;
 
         &:hover {
             background-color: #FC5E14;
@@ -967,16 +1001,15 @@ p {
                 .service-grid {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
-                    gap: 12px;
+                    gap: 20px;
 
                     .service-link {
                         color: #fff;
                         text-decoration: none;
-                        padding: 8px 12px;
+                        padding: 0;
                         font-weight: 500;
                         font-family: 'Space Grotesk', sans-serif;
                         transition: all 0.3s ease;
-                        border-bottom: 1px solid #FFFFFF1A;
 
                         &:hover {
                             color: #FC5E14;
@@ -1383,7 +1416,15 @@ nav input {
         margin: auto;
         width: 1px;
         height: calc(100% + 60px);
-        border-left: 2px dashed #FFFFFF14;
+        border-left: 2px solid #FFFFFF14;
+        border-style: dashed;
+        border-width: 0 0 0 2px;
+        border-color: #FFFFFF14;
+        border-image: repeating-linear-gradient(to bottom,
+                #FFFFFF14 0,
+                #FFFFFF14 16px,
+                transparent 16px,
+                transparent 28px) 1;
         transition: border-color 0.4s;
     }
 
@@ -1439,17 +1480,33 @@ nav input {
         margin: auto;
         width: 2px;
         height: calc(100% + 60px);
-        border-right: 2px dashed #FFFFFF14;
+        border-right: 2px solid #FFFFFF14;
+        border-style: dashed;
+        border-width: 0 2px 0 0;
+        border-color: #FFFFFF14;
+        border-image: repeating-linear-gradient(to bottom,
+                #FFFFFF14 0,
+                #FFFFFF14 16px,
+                transparent 16px,
+                transparent 28px) 1;
         transition: border-color 0.4s;
     }
 }
 
 .active-step .left-step::before {
-    border-left: 2px dashed #FC5E14;
+    border-image: repeating-linear-gradient(to bottom,
+            #FC5E14 0,
+            #FC5E14 16px,
+            transparent 16px,
+            transparent 28px) 1;
 }
 
 .active-step .right-step::before {
-    border-right: 2px dashed #FC5E14;
+    border-image: repeating-linear-gradient(to bottom,
+            #FC5E14 0,
+            #FC5E14 16px,
+            transparent 16px,
+            transparent 28px) 1;
 }
 
 .active-step {
@@ -1770,6 +1827,7 @@ nav input {
     .btn-orange,
     .btn-gray {
         font-size: 12px;
+        // min-width: 130px;
 
         >span {
             width: 26px;
@@ -1995,7 +2053,12 @@ nav input {
             position: absolute;
             left: -24px;
             top: 0;
-            border-left: 2px dashed #FFFFFF14;
+            border-left: 2px solid #FFFFFF14;
+            border-image: repeating-linear-gradient(to bottom,
+                    #FFFFFF14 0,
+                    #FFFFFF14 16px,
+                    transparent 16px,
+                    transparent 28px) 1;
             height: 100%;
             width: 1px;
         }
@@ -2023,7 +2086,12 @@ nav input {
             position: absolute;
             left: -24px;
             top: 0;
-            border-left: 2px dashed #FFFFFF14;
+            border-left: 2px solid #FFFFFF14;
+            border-image: repeating-linear-gradient(to bottom,
+                    #FFFFFF14 0,
+                    #FFFFFF14 16px,
+                    transparent 16px,
+                    transparent 28px) 1;
             height: 100%;
             width: 1px;
         }
@@ -2032,13 +2100,21 @@ nav input {
     .active-step {
         .left-step-img {
             &::before {
-                border-left: 2px dashed #FC5E14;
+                border-image: repeating-linear-gradient(to bottom,
+                        #FC5E14 0,
+                        #FC5E14 16px,
+                        transparent 16px,
+                        transparent 28px) 1;
             }
         }
 
         .right-step-img {
             &::before {
-                border-left: 2px dashed #FC5E14;
+                border-image: repeating-linear-gradient(to bottom,
+                        #FC5E14 0,
+                        #FC5E14 16px,
+                        transparent 16px,
+                        transparent 28px) 1;
             }
         }
     }

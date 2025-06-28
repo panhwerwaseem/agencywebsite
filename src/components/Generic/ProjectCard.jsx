@@ -8,7 +8,10 @@ const ProjectCard = ({ project }) => {
             <div className="project-details">
                 <div>
                     <h4>{project.title}</h4>
-                    <p>{project.description}</p>
+                    {
+                        project?.description &&
+                        <p>{project.description}</p>
+                    }
                 </div>
                 <span className='arrow-project'>
                     <BsArrowRight />

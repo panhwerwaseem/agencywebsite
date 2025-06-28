@@ -10,14 +10,14 @@ const OurPortfolio = () => {
         pill: "Our Work",
         titleOrange: "OUR",
         title: "PORTFOLIO",
-        description: "At WizSpeed, we build robust, scalable, and innovative software solutions tailored to your unique needs. From concept to deployment, our development process is focused on driving efficiency, growth, and long-term success."
+        description: "Feeling invisible online? A well-designed website gets you noticed and builds trust and credibility. See how we’ve transformed businesses with growth-driven website designs. "
     }
     return (
         <>
-            <div className="service-page">
+            <div className="service-page portfolio">
                 <Navbar />
                 <div className="container lg:mt-16 md:mt-12 mt-8">
-                    <ServiceHeader data={data} />
+                    <ServiceHeader data={data} isSpanBlock={false} />
                     <img src="/images/headerCurveLeft.svg" alt="" className="" />
                     <img src="/images/headerRectangleMd.svg" alt="" className="" />
                     <img src="/images/headerRectangleSm.svg" alt="" className="" />

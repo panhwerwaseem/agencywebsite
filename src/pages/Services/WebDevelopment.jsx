@@ -409,11 +409,44 @@ const WebDevelopment = () => {
         ]
     }
 
+    const projectHeadData = {
+        title: "The Best Designs Of 2024",
+        heading: "OUR PORTFOLIO",
+        description: "We don’t sell our digital marketing and web design services in a hit-or-miss manner. Instead, we cater to your problems through our targeted services, including:"
+    }
+
+    const projectsData = [
+        {
+            id: 1,
+            category: "Landing Page UI",
+            title: "Increasing 10x ROI for a Luxury Travel Providers",
+            image: "/images/web-project-1.jpg" // Replace with actual image path
+        },
+        {
+            id: 2,
+            category: "Website",
+            title: "Helping Event Planners for Smooth Event Planning",
+            image: "/images/web-project-2.jpg" // Replace with actual image path
+        },
+        {
+            id: 3,
+            category: "Posts",
+            title: "Empowering Wellness",
+            image: "/images/web-project-3.jpg" // Replace with actual image path
+        },
+        {
+            id: 4,
+            category: "Brand Identity",
+            title: "Empowering Wellness",
+            image: "/images/project-4.png" // Replace with actual image path
+        }
+    ]
+
     const [activeTab, setActiveTab] = useState(Object.keys(tabsData)[0] || '')
 
     return (
         <>
-            <div className="service-page">
+            <div className="service-page" data-aos="fade-down">
                 <Navbar />
                 <div className="container lg:mt-16 md:mt-12 mt-8">
                     <ServiceHeader data={data} />
@@ -422,15 +455,27 @@ const WebDevelopment = () => {
                     <img src="/images/headerRectangleSm.svg" alt="" className="" />
                 </div>
             </div>
-            <TrustedBy />
-            <ServiceTabs headData={headData} tabsData={tabsData} activeTab={activeTab} setActiveTab={setActiveTab} />
-            <ServiceSteps stepsData={stepsData[activeTab]} />
-            <Projects />
-            <div className='lg:pt-[120px] bg-brand-dark'>
+            <div data-aos="fade-up">
+                <TrustedBy />
+            </div>
+            <div data-aos="fade-up">
+
+                <ServiceTabs headData={headData} tabsData={tabsData} activeTab={activeTab} setActiveTab={setActiveTab} isEqualBox={true} />
+            </div>
+            <div data-aos="fade-up">
+                <ServiceSteps stepsData={stepsData[activeTab]} />
+            </div>
+            <div data-aos="fade-up">
+                <Projects data={projectsData} headData={projectHeadData} showAvatars={true} />
+            </div>
+            <div data-aos="fade-up">
                 <FAQs />
             </div>
-            <ServiceCoversion />
+            <div data-aos="fade-up">
+                <ServiceCoversion />
+            </div>
             <Footer />
+
         </>
     )
 }

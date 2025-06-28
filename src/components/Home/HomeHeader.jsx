@@ -57,19 +57,19 @@ const HomeHeader = () => {
                         SCROLL TO DISCOVER
                     </a>
                 </div>
-                <div className="right-hdr !hidden md:inline-block">
+                <div className="right-hdr !hidden md:!inline-block">
                     <img src="/images/flower-orange.svg" alt="" className="flwr-orange" />
                     <div className="h-px w-[60px] bg-gray-900 my-[3px]"></div>
                     <p className='text-gray-900'>Transform Your Digital <br /> Impact with Wizspeed</p>
                 </div>
             </div>
 
-            <div className="clients !hidden md:flex">
+            <div className="clients !hidden md:!flex">
                 <div className="flex">
-                    <img src='./images/headerUser.png' />
-                    <img src='./images/headerUser.png' />
-                    <img src='./images/headerUser.png' />
-                    <img src='./images/headerUser.png' />
+                    <img src='/images/headerUser.png' />
+                    <img src='/images/headerUser-2.png' />
+                    <img src='/images/headerUser-3.png' />
+                    <img src='/images/headerUser-4.png' />
                 </div>
                 <span>
                     <strong>100+</strong>
@@ -80,10 +80,10 @@ const HomeHeader = () => {
             <div className="flex md:hidden mt-4 gap-3">
                 <div className="clients">
                     <div className="flex">
-                        <img src='./images/headerUser.png' />
-                        <img src='./images/headerUser.png' />
-                        <img src='./images/headerUser.png' />
-                        <img src='./images/headerUser.png' />
+                        <img src='/images/headerUser.png' />
+                        <img src='/images/headerUser-2.png' />
+                        <img src='/images/headerUser-3.png' />
+                        <img src='/images/headerUser-4.png' />
                     </div>
                     <span>
                         <strong>100+</strong>

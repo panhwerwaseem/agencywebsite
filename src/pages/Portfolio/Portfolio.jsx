@@ -14,7 +14,7 @@ const Portfolio = () => {
         pill: "Our Work",
         titleOrange: "OUR",
         title: "PORTFOLIO",
-        description: "At WizSpeed, we build robust, scalable, and innovative software solutions tailored to your unique needs. From concept to deployment, our development process is focused on driving efficiency, growth, and long-term success."
+        description: "Feeling invisible online? A well-designed website gets you noticed and builds trust and credibility. See how we’ve transformed businesses with growth-driven website designs. "
     }
     return (
         <>

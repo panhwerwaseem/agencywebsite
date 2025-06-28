@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaChevronDown } from 'react-icons/fa6';
 import { useLocation } from 'react-router-dom';
 
@@ -28,6 +28,18 @@ const Navbar = () => {
         return location.pathname.startsWith(path);
     };
 
+    useEffect(() => {
+        if (location.pathname.includes('/digital-marketing')) {
+            setActiveServiceCategory('digital-marketing');
+        } else if (location.pathname.includes('/app-development')) {
+            setActiveServiceCategory('app-development');
+        } else if (location.pathname.includes('/software-development')) {
+            setActiveServiceCategory('software-development');
+        } else {
+            setActiveServiceCategory('web-development');
+        }
+    }, [location.pathname]);
+
     const serviceData = {
         'web-development': [
             {
@@ -35,134 +47,90 @@ const Navbar = () => {
                 route: "/service/web-development"
             },
             {
+                name: "3d Animated",
+                route: "/service/web-development"
+            },
+            {
                 name: "Webflow",
-                route: ""
+                route: "/service/web-development"
             },
             {
                 name: "Wix",
-                route: ""
-            },
-            {
-                name: "WordPress",
-                route: ""
+                route: "/service/web-development"
             },
             {
                 name: "Shopify",
-                route: ""
+                route: "/service/web-development"
             },
             {
                 name: "E-Commerce",
-                route: ""
+                route: "/service/web-development"
             },
             {
                 name: "Square Space",
-                route: ""
+                route: "/service/web-development"
             },
             {
-                name: "Responsive Design",
-                route: ""
+                name: "WordPress",
+                route: "/service/web-development"
             }
         ],
         'digital-marketing': [
             {
-                name: "SEO Optimization",
+                name: "Social Media Marketing",
                 route: "/service/digital-marketing"
             },
             {
-                name: "Google Ads",
-                route: ""
+                name: "Google Merchant Advertising",
+                route: "/service/digital-marketing"
             },
             {
-                name: "Social Media Marketing",
-                route: ""
+                name: "Corporate Branding",
+                route: "/service/digital-marketing"
             },
             {
-                name: "Content Marketing",
-                route: ""
+                name: "Local SEO",
+                route: "/service/digital-marketing"
             },
             {
-                name: "Email Marketing",
-                route: ""
+                name: "Pay-Per Click Marketing",
+                route: "/service/digital-marketing"
             },
             {
-                name: "Analytics & Reporting",
-                route: ""
-            },
-            {
-                name: "Brand Strategy",
-                route: ""
-            },
-            {
-                name: "PPC Campaigns",
-                route: ""
+                name: "Search Engine Optimization",
+                route: "/service/digital-marketing"
             }
         ],
         'app-development': [
             {
-                name: "iOS Apps",
+                name: "iOS App Development",
                 route: "/service/app-development"
             },
             {
-                name: "Android Apps",
-                route: "/mob-archieves/travelica"
+                name: "Android App Development",
+                route: "/service/app-development"
             },
             {
-                name: "React Native",
-                route: "/mob-archieves"
+                name: "Static App Development",
+                route: "/service/app-development"
             },
             {
-                name: "Flutter",
-                route: ""
-            },
-            {
-                name: "Progressive Web Apps",
-                route: ""
-            },
-            {
-                name: "Mobile UI/UX",
-                route: ""
-            },
-            {
-                name: "App Store Optimization",
-                route: ""
-            },
-            {
-                name: "Cross-Platform",
-                route: ""
+                name: "Dynamic App Development",
+                route: "/service/app-development"
             }
         ],
         'software-development': [
             {
-                name: "Custom Software",
+                name: "Custom CRM",
                 route: "/service/software-development"
             },
             {
-                name: "API Development",
-                route: ""
+                name: "Custom ERP",
+                route: "/service/software-development"
             },
             {
-                name: "Database Design",
-                route: ""
-            },
-            {
-                name: "Cloud Solutions",
-                route: ""
-            },
-            {
-                name: "Enterprise Systems",
-                route: ""
-            },
-            {
-                name: "Integration Services",
-                route: ""
-            },
-            {
-                name: "Maintenance & Support",
-                route: ""
-            },
-            {
-                name: "Quality Assurance",
-                route: ""
+                name: "POS Development",
+                route: "/service/software-development"
             }
         ]
     };

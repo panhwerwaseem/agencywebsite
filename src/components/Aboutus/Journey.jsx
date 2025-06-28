@@ -7,22 +7,22 @@ const Journey = () => {
         {
             title: "Professional Experts",
             description: "Our team of experts is passionate about innovation and is well-versed in emerging problems, enabling you to tackle any problem efficiently.",
-            imgsrc: "./images/about-1.png"
+            imgsrc: "/images/about-1.png"
         },
         {
             title: "Proven Results",
             description: "Relying on us means getting measurable success and growth. Our experts leave no stone unturned to ensure good returns from investment in your project.",
-            imgsrc: "./images/about-2.png"
+            imgsrc: "/images/about-2.png"
         },
         {
             title: "High-Quality Services",
             description: "Since we offer tried-and-tested solutions you can find unparalleled services related to digital marketing and web designing under one roof.",
-            imgsrc: "./images/about-3.png"
+            imgsrc: "/images/about-3.png"
         },
         {
             title: "Customer Support",
             description: "Our support team is ready to assist you 24/7. You can resolve your queries and get updated on your projects anytime.",
-            imgsrc: "./images/about-1.png"
+            imgsrc: "/images/about-1.png"
         }
     ]
 
@@ -34,7 +34,7 @@ const Journey = () => {
                     <div className='flex flex-col justify-center lg:order-2 order-1'>
                         <div className="head-pill w-fit">
                             <img src="/images/flower-white.svg" alt="" className="flwr-white" />
-                            We’ve helped hundreds of companies
+                            We’ve Helped Hundreds Of Companies
                         </div>
                         <h3 className='lg:text-[56px] text-[34px] leading-[100%] font-space-grotesk font-bold text-white uppercase mt-7 lg:mb-12 mb-6'>
                             We’re only just getting started on <span className="text-orange">our journey</span>

@@ -30,19 +30,19 @@ const RightWay = () => {
                     </div>
                     <div className="abt-card pb-6">
                         <h4 className='text-white font-space-grotesk text-2xl font-semibold mb-4'>
-                            Subscribe to a plan
+                            Add a task
                         </h4>
                         <p className='text-gray-700'>
-                            Subscribe to a plan & request as many designs as you’d like.
+                            Manage your design board using Trello. View tasks and status.
                         </p>
                         <img src="/images/abt-3.png" alt="" className='!mt-10' />
                     </div>
                     <div className="abt-card pb-6">
                         <h4 className='text-white font-space-grotesk text-2xl font-semibold mb-4'>
-                            Subscribe to a plan
+                            Enjoy results
                         </h4>
                         <p className='text-gray-700'>
-                            Subscribe to a plan & request as many designs as you’d like.
+                            Receive your completed tasks in 2-4 business days.
                         </p>
                         <img src="/images/abt-4.png" alt="" className='!mt-10' />
                     </div>

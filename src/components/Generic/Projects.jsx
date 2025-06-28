@@ -18,38 +18,11 @@ const NextArrow = ({ onClick }) => (
     </button>
 )
 
-const Projects = ({ className }) => {
-    // Sample project data matching the screenshot
-    const projectsData = [
-        {
-            id: 1,
-            category: "Landing Page UI",
-            title: "Model Agency",
-            description: "Creating An Impactful Digital Gallery Of Passion And Expertise",
-            image: "/images/project-1.jpg" // Replace with actual image path
-        },
-        {
-            id: 2,
-            category: "Website",
-            title: "Mindfulness",
-            description: "Harmonising Mind, Body, And Design",
-            image: "/images/project-2.jpg" // Replace with actual image path
-        },
-        {
-            id: 3,
-            category: "Posts",
-            title: "Mindfulness",
-            description: "Harmonising Mind, Body, And Design",
-            image: "/images/project-3.jpg" // Replace with actual image path
-        },
-        {
-            id: 4,
-            category: "Brand Identity",
-            title: "Mindfulness",
-            description: "Harmonising Mind, Body, And Design",
-            image: "/images/project-4.png" // Replace with actual image path
-        }
-    ]
+const Projects = ({ className, headData = {
+    title: "Our Portfolio",
+    heading: "WHAT WE DO BEST",
+    description: "We don't sell our digital marketing and web design services in a hit-or-miss manner. Instead, we cater to your problems through our targeted services, including:"
+}, data, showAvatars = false }) => {
 
     const sliderSettings = {
         infinite: true,
@@ -71,17 +44,29 @@ const Projects = ({ className }) => {
                         <div>
                             <div className="projects-badge">
                                 <img src="/images/flower-orange.svg" alt="" className="flwr-orange" />
-                                <span>OUR Portfolio</span>
+                                <span>{headData?.title}</span>
                             </div>
-                            <h2>WHAT WE DO BEST</h2>
-                            <p className='max-w-[640px]'>We don't sell our digital marketing and web design services in a hit-or-miss manner. Instead, we cater to your problems through our targeted services, including:</p>
+                            <h2>{headData?.heading}</h2>
+                            <p className='max-w-[690px]'>{headData?.description}</p>
                         </div>
-                        <button className="view-all-btn">View All Projects</button>
+                        <div className='flex flex-col items-end'>
+                            {
+                                showAvatars && (
+                                    <div className="flex projects-avatar">
+                                        <img src='/images/headerUser.png' />
+                                        <img src='/images/headerUser-2.png' />
+                                        <img src='/images/headerUser-3.png' />
+                                        <img src='/images/headerUser-4.png' />
+                                    </div>
+                                )
+                            }
+                            <button className="view-all-btn w-fit">View All Projects</button>
+                        </div>
                     </div>
 
                     <div className="projects-slider w-[2490px]">
                         <Slider {...sliderSettings}>
-                            {projectsData.map((project) => (
+                            {data?.map((project) => (
                                 <div key={project.id} className="project-slide">
                                     <ProjectCard project={project} />
                                 </div>
