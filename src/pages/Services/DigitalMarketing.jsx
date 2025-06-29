@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/Generic/Navbar'
 import ServiceHeader from '../../components/Services/ServiceHeader'
 import TrustedBy from '../../components/Generic/TrustedBy'
@@ -247,36 +247,46 @@ const DigitalMarketing = () => {
     }
 
     const essentianlsData = {
-        pill: "Level Up Your Sales Game",
-        title: "Essential Features",
-        highlightText: "for Your Success",
-        description: "Boost your brand's presence with engaging content, smart strategies, and consistent growth across all major platforms. We turn followers into loyal customers through impactful social media marketing."
+        pill: "Creating Winning Stories Together",
+        title: "POWER UP YOUR ",
+        highlightText: "SOCIAL MEDIA GAME",
+        description: "Boost your brand’s presence with engaging content, smart strategies, and consistent growth across all major platforms. We turn followers into loyal customers through impactful social media marketing."
     }
 
     const essentialSteps = [
         {
             title: "Scalability",
             description: "Our solutions are designed to grow with your business, accommodating future needs.",
-            image: "/images/essential-soft-1.svg"
+            image: "/images/ess-digi-1.svg"
         },
         {
             title: "Security and Reliability",
             description: "We employ robust security measures to safeguard your customer data, including encryption, firewalls.",
-            image: "/images/essential-soft-2.svg"
+            image: "/images/ess-digi-2.svg"
+
         },
         {
             title: "Seamless Integration",
             description: "Our POS systems seamlessly integrate with your existing business operations.",
-            image: "/images/essential-soft-3.svg"
+            image: "/images/ess-digi-3.svg"
+
         },
         {
             title: "Real-time Insights",
             description: "Gain valuable insights into sales performance, inventory levels, and customer behavior.",
-            image: "/images/essential-soft-4.svg"
+            image: "/images/ess-digi-4.svg"
+
         }
     ]
 
-    const [activeTab, setActiveTab] = useState('social-media-marketing')
+    const [activeTab, setActiveTab] = useState('social-media-marketing');
+
+    useEffect(() => {
+        const service = new URLSearchParams(window.location.search).get('service')
+        if (service) {
+            setActiveTab(service)
+        }
+    }, [])
 
     return (
         <>

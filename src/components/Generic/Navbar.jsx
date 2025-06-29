@@ -44,93 +44,93 @@ const Navbar = () => {
         'web-development': [
             {
                 name: "Custom Web Design",
-                route: "/service/web-development"
+                route: "/service/web-development?service=custom-web-design"
             },
             {
                 name: "3d Animated",
-                route: "/service/web-development"
+                route: "/service/web-development?service=3d-animated"
             },
             {
                 name: "Webflow",
-                route: "/service/web-development"
+                route: "/service/web-development?service=webflow"
             },
             {
                 name: "Wix",
-                route: "/service/web-development"
+                route: "/service/web-development?service=wix"
             },
             {
                 name: "Shopify",
-                route: "/service/web-development"
+                route: "/service/web-development?service=shopify"
             },
             {
                 name: "E-Commerce",
-                route: "/service/web-development"
+                route: "/service/web-development?service=e-commerce"
             },
             {
                 name: "Square Space",
-                route: "/service/web-development"
+                route: "/service/web-development?service=square-space"
             },
             {
                 name: "WordPress",
-                route: "/service/web-development"
+                route: "/service/web-development?service=wordpress"
             }
         ],
         'digital-marketing': [
             {
                 name: "Social Media Marketing",
-                route: "/service/digital-marketing"
+                route: "/service/digital-marketing?service=social-media-marketing"
             },
             {
                 name: "Google Merchant Advertising",
-                route: "/service/digital-marketing"
+                route: "/service/digital-marketing?service=google-merchant-advertising"
             },
             {
                 name: "Corporate Branding",
-                route: "/service/digital-marketing"
+                route: "/service/digital-marketing?service=corporate-branding"
             },
             {
                 name: "Local SEO",
-                route: "/service/digital-marketing"
+                route: "/service/digital-marketing?service=local-seo"
             },
             {
                 name: "Pay-Per Click Marketing",
-                route: "/service/digital-marketing"
+                route: "/service/digital-marketing?service=pay-per-click-marketing"
             },
             {
                 name: "Search Engine Optimization",
-                route: "/service/digital-marketing"
+                route: "/service/digital-marketing?service=search-engine-optimization"
             }
         ],
         'app-development': [
             {
                 name: "iOS App Development",
-                route: "/service/app-development"
+                route: "/service/app-development?service=ios-app-development"
             },
             {
                 name: "Android App Development",
-                route: "/service/app-development"
+                route: "/service/app-development?service=android-app-development"
             },
             {
                 name: "Static App Development",
-                route: "/service/app-development"
+                route: "/service/app-development?service=static-app-development"
             },
             {
                 name: "Dynamic App Development",
-                route: "/service/app-development"
+                route: "/service/app-development?service=dynamic-app-development"
             }
         ],
         'software-development': [
             {
                 name: "Custom CRM",
-                route: "/service/software-development"
+                route: "/service/software-development?service=custom-crm"
             },
             {
                 name: "Custom ERP",
-                route: "/service/software-development"
+                route: "/service/software-development?service=custom-erp"
             },
             {
                 name: "POS Development",
-                route: "/service/software-development"
+                route: "/service/software-development?service=pos-development"
             }
         ]
     };

@@ -56,7 +56,7 @@ const ServiceSteps = ({ stepsData }) => {
                                     </div>
                                     <div className="right-step flex flex-col gap-4 justify-center ">
                                         <span className="number">{step?.number}</span>
-                                        <h3 className='text-3xl font-space-grotesk text-white'>{step?.title}</h3>
+                                        <h3 className='md:text-3xl text-xl font-space-grotesk text-white'>{step?.title}</h3>
                                         <p className='text-gray-700'>{step?.description}</p>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@ const ServiceSteps = ({ stepsData }) => {
                                 >
                                     <div className={`left-step flex flex-col gap-4 justify-center lg:order-1 order-2 ${step?.number == '01' ? 'first' : step?.number == '05' ? 'last' : ''}`}>
                                         <span className="number">{step?.number}</span>
-                                        <h3 className='text-3xl font-space-grotesk text-white'>{step?.title}</h3>
+                                        <h3 className='md:text-3xl text-xl font-space-grotesk text-white'>{step?.title}</h3>
                                         <p className='text-gray-700'>{step?.description}</p>
                                     </div>
                                     <div className={`right-step-img w-full lg:order-2 order-1 ${step?.number == '01' ? 'first' : step?.number == '05' ? 'last' : ''}`}>

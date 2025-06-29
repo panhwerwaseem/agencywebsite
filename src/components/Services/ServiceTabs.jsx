@@ -43,7 +43,12 @@ const ServiceTabs = ({
                     {Object.entries(tabsData).map(([key, tab]) => (
                         <button
                             key={key}
-                            onClick={() => setActiveTab(key)}
+                            onClick={() => {
+                                setActiveTab(key)
+                                const url = new URL(window.location)
+                                url.searchParams.set('service', key)
+                                window.history.pushState({}, '', url.toString())
+                            }}
                             className={`px-6 py-2 flex gap-2 items-center rounded-full border transition-all duration-300 font-space-grotesk tab-what ${activeTab === key
                                 ? 'bg-orange-500 text-white border-orange-500 active-tab-what '
                                 : 'bg-transparent text-gray-900 border-gray-600 hover:border-orange-500 hover:text-orange-500'

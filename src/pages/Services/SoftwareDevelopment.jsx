@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/Generic/Navbar'
 import ServiceHeader from '../../components/Services/ServiceHeader'
 import TrustedBy from '../../components/Generic/TrustedBy'
@@ -209,7 +209,14 @@ const SoftwareDevelopment = () => {
         }
     ]
 
-    const [activeTab, setActiveTab] = useState(Object.keys(tabsData)[0] || '')
+    const [activeTab, setActiveTab] = useState(Object.keys(tabsData)[0] || '');
+
+    useEffect(() => {
+        const service = new URLSearchParams(window.location.search).get('service')
+        if (service) {
+            setActiveTab(service)
+        }
+    }, [])
 
     return (
         <>
