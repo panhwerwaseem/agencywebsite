@@ -2,18 +2,16 @@ import React from 'react'
 import Navbar from '../../components/Generic/Navbar'
 import ServiceHeader from '../../components/Services/ServiceHeader'
 import TrustedBy from '../../components/Generic/TrustedBy'
-import ShowCase from '../../components/Portfolio/ShowCase'
-import Logos from '../../components/Portfolio/Logos'
-import WebsiteShowcase from '../../components/Portfolio/WebsiteShowcase'
-import MobileApps from '../../components/Portfolio/MobileApps'
+import SoftwareDevelopment from '../../components/Portfolio/SoftwareDevelopment'
 import Footer from '../../components/Generic/Footer'
+import RecentWork from '../../components/Portfolio/RecentWork'
 
-const Portfolio = () => {
+const SoftwareDevelopmentPortfolio = () => {
     const data = {
-        pill: "Our Work",
-        titleOrange: "OUR",
+        pill: "Software Development Portfolio",
+        titleOrange: "SOFTWARE DEVELOPMENT",
         title: "PORTFOLIO",
-        description: "Feeling invisible online? A well-designed website gets you noticed and builds trust and credibility. See how we’ve transformed businesses with growth-driven website designs. "
+        description: "Discover our custom software solutions that solve complex business challenges. From enterprise applications to innovative software products."
     }
     return (
         <>
@@ -29,27 +27,15 @@ const Portfolio = () => {
             <div data-aos="fade-up">
                 <TrustedBy />
             </div>
-
-            {/* Web Development Section */}
             <div data-aos="fade-up" data-aos-delay="100">
-                <ShowCase />
+                <SoftwareDevelopment />
             </div>
-
-            {/* Digital Marketing Section */}
             <div data-aos="fade-up" data-aos-delay="200">
-                <WebsiteShowcase />
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300">
-                <Logos />
-            </div>
-
-            {/* App Development Section */}
-            <div data-aos="fade-up" data-aos-delay="400">
-                <MobileApps />
+                <RecentWork serviceType="software-development" />
             </div>
             <Footer />
         </>
     )
 }
 
-export { Portfolio }
+export { SoftwareDevelopmentPortfolio }

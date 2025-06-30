@@ -2,18 +2,16 @@ import React from 'react'
 import Navbar from '../../components/Generic/Navbar'
 import ServiceHeader from '../../components/Services/ServiceHeader'
 import TrustedBy from '../../components/Generic/TrustedBy'
-import ShowCase from '../../components/Portfolio/ShowCase'
-import Logos from '../../components/Portfolio/Logos'
-import WebsiteShowcase from '../../components/Portfolio/WebsiteShowcase'
 import MobileApps from '../../components/Portfolio/MobileApps'
 import Footer from '../../components/Generic/Footer'
+import RecentWork from '../../components/Portfolio/RecentWork'
 
-const Portfolio = () => {
+const AppDevelopmentPortfolio = () => {
     const data = {
-        pill: "Our Work",
-        titleOrange: "OUR",
+        pill: "App Development Portfolio",
+        titleOrange: "APP DEVELOPMENT",
         title: "PORTFOLIO",
-        description: "Feeling invisible online? A well-designed website gets you noticed and builds trust and credibility. See how we’ve transformed businesses with growth-driven website designs. "
+        description: "Explore our innovative mobile applications that deliver exceptional user experiences. From iOS to Android and cross-platform solutions."
     }
     return (
         <>
@@ -29,27 +27,15 @@ const Portfolio = () => {
             <div data-aos="fade-up">
                 <TrustedBy />
             </div>
-
-            {/* Web Development Section */}
             <div data-aos="fade-up" data-aos-delay="100">
-                <ShowCase />
-            </div>
-
-            {/* Digital Marketing Section */}
-            <div data-aos="fade-up" data-aos-delay="200">
-                <WebsiteShowcase />
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300">
-                <Logos />
-            </div>
-
-            {/* App Development Section */}
-            <div data-aos="fade-up" data-aos-delay="400">
                 <MobileApps />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <RecentWork serviceType="app-development" />
             </div>
             <Footer />
         </>
     )
 }
 
-export { Portfolio }
+export { AppDevelopmentPortfolio }

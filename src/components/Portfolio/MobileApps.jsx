@@ -3,16 +3,31 @@ import Slider from 'react-slick'
 
 const MobileApps = () => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 1200,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
-        variableWidth: true,
+        variableWidth: false,
         arrows: false,
-        dots: false,
         autoplay: true,
-        autoplaySpeed: 4000
+        autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     }
 
     const data = [
@@ -69,7 +84,7 @@ const MobileApps = () => {
                         Our mobile app process turns ideas into elegant, high-performing digital products. We focus on clean design, smooth interactions, and measurable results.
                     </p>
                 </div>
-                <div className="mobile-apps-slider lg:my-16 my-10 w-[2490px]">
+                <div className="mobile-apps-slider lg:my-16 my-10">
                     <Slider {...settings}>
                         {data.map((item, index) => (
                             <div key={index} className='px-5'>
@@ -87,8 +102,8 @@ const MobileApps = () => {
                         ))}
                     </Slider>
                 </div>
-                <a href="/portfolio/our-portfolio" className="btn-white w-fit mx-auto px-5">
-                    View All Projects
+                <a href="/portfolio/app-development" className="btn-white w-fit mx-auto px-5">
+                    View More App Projects
                 </a>
             </div>
         </div>
