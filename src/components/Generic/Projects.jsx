@@ -60,7 +60,7 @@ const Projects = ({ className, headData = {
                                     </div>
                                 )
                             }
-                            <button className="view-all-btn w-fit" data-aos="fade-left" data-aos-duration="800" data-aos-delay="800">View All Projects</button>
+                            <a href="/portfolio" className="view-all-btn w-fit" data-aos="fade-left" data-aos-duration="800" data-aos-delay="800">View All Projects</a>
                         </div>
                     </div>
 

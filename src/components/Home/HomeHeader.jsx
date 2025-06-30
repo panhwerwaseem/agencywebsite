@@ -47,7 +47,7 @@ const HomeHeader = () => {
             </p>
             <div className="hdr-btm flex justify-between items-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400">
                 <div className="btn-group">
-                    <a href="" className="btn-orange" data-aos="fade-right" data-aos-duration="800" data-aos-delay="1600">
+                    <a href="/contact" className="btn-orange" data-aos="fade-right" data-aos-duration="800" data-aos-delay="1600">
                         <span>
                             <FaArrowsAlt />
                         </span>

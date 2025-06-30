@@ -2,18 +2,17 @@ import React from 'react'
 import Navbar from '../../components/Generic/Navbar'
 import ServiceHeader from '../../components/Services/ServiceHeader'
 import TrustedBy from '../../components/Generic/TrustedBy'
-import ShowCase from '../../components/Portfolio/ShowCase'
 import Logos from '../../components/Portfolio/Logos'
 import WebsiteShowcase from '../../components/Portfolio/WebsiteShowcase'
-import MobileApps from '../../components/Portfolio/MobileApps'
 import Footer from '../../components/Generic/Footer'
+import RecentWork from '../../components/Portfolio/RecentWork'
 
-const Portfolio = () => {
+const DigitalMarketingPortfolio = () => {
     const data = {
-        pill: "Our Work",
-        titleOrange: "OUR",
+        pill: "Digital Marketing Portfolio",
+        titleOrange: "DIGITAL MARKETING",
         title: "PORTFOLIO",
-        description: "Feeling invisible online? A well-designed website gets you noticed and builds trust and credibility. See how we’ve transformed businesses with growth-driven website designs. "
+        description: "Discover our successful digital marketing campaigns that drive real results. From SEO optimization to social media marketing and PPC advertising."
     }
     return (
         <>
@@ -29,27 +28,18 @@ const Portfolio = () => {
             <div data-aos="fade-up">
                 <TrustedBy />
             </div>
-
-            {/* Web Development Section */}
             <div data-aos="fade-up" data-aos-delay="100">
-                <ShowCase />
-            </div>
-
-            {/* Digital Marketing Section */}
-            <div data-aos="fade-up" data-aos-delay="200">
                 <WebsiteShowcase />
             </div>
-            <div data-aos="fade-up" data-aos-delay="300">
+            <div data-aos="fade-up" data-aos-delay="200">
                 <Logos />
             </div>
-
-            {/* App Development Section */}
-            <div data-aos="fade-up" data-aos-delay="400">
-                <MobileApps />
+            <div data-aos="fade-up" data-aos-delay="300">
+                <RecentWork serviceType="digital-marketing" />
             </div>
             <Footer />
         </>
     )
 }
 
-export { Portfolio }
+export { DigitalMarketingPortfolio }

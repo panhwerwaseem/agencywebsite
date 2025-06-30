@@ -12,7 +12,7 @@ const LetsTalk = () => {
                     <p className="text-gray-900 text-center max-w-[600px] mx-auto my-7" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                         Let’s make your website work harder than you do, attracting new customers, building trust and driving revenue.
                     </p>
-                    <a href="" className="btn-orange w-fit mx-auto smooth-hover pulse-animation magnetic-effect" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                    <a href="/contact" className="btn-orange w-fit mx-auto smooth-hover pulse-animation magnetic-effect" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
                         <span>
                             <FaPhone />
                         </span>
