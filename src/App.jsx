@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './index.css'
 import './App.css'
 import './style.scss'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 import Home from './pages/Home'
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import { AppDevelopment, DigitalMarketing, SoftwareDevelopment, WebDevelopment } from './pages/Services'
@@ -14,6 +16,15 @@ import Travelica from './pages/MobileArchieves/Travelica'
 import AboutUs from './pages/AboutUs/AboutUs'
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50,
+      delay: 100,
+    })
+  }, [])
 
   return (
     <BrowserRouter>
