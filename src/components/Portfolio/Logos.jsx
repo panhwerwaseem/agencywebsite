@@ -68,7 +68,10 @@ const Logos = () => {
                 </Marquee>
             </div>
             <div className="flex justify-center mt-12">
-                <a href="/portfolio/digital-marketing" className="btn-white w-fit mx-auto px-5">
+                <a
+                    href="/portfolio/digital-marketing"
+                    className="btn-white w-fit mx-auto px-5"
+                >
                     View More Marketing Projects
                 </a>
             </div>

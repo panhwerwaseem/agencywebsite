@@ -16,19 +16,27 @@ const WebDevelopmentPortfolio = () => {
     }
     return (
         <>
-            <div className="service-page portfolio">
+            <div className="service-page portfolio" data-aos="fade-down">
                 <Navbar />
                 <div className="container lg:mt-16 md:mt-12 mt-8">
                     <ServiceHeader data={data} isSpanBlock={false} />
-                    <img src="/images/headerCurveLeft.svg" alt="" className="" />
-                    <img src="/images/headerRectangleMd.svg" alt="" className="" />
-                    <img src="/images/headerRectangleSm.svg" alt="" className="" />
+                    <img src="/images/headerCurveLeft.svg" alt="" className="" data-aos="fade-up" data-aos-delay="200" />
+                    <img src="/images/headerRectangleMd.svg" alt="" className="" data-aos="fade-left" data-aos-delay="300" />
+                    <img src="/images/headerRectangleSm.svg" alt="" className="" data-aos="fade-right" data-aos-delay="400" />
                 </div>
             </div>
-            <TrustedBy />
-            <ShowCase />
-            <CaseStudies />
-            <RecentWork serviceType="web-development" />
+            <div data-aos="fade-up">
+                <TrustedBy />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <ShowCase />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <CaseStudies />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <RecentWork serviceType="web-development" />
+            </div>
             <Footer />
         </>
     )
