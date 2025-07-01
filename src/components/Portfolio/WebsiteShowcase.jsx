@@ -130,8 +130,8 @@ const WebsiteShowcase = () => {
                 </div>
 
                 <div className="text-center mt-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
-                    <a 
-                        href="/portfolio/digital-marketing" 
+                    <a
+                        href="/portfolio/digital-marketing"
                         className="btn-orange inline-flex items-center gap-2 smooth-hover pulse-animation"
                     >
                         <span>View All Marketing Projects</span>
